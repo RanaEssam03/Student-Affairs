@@ -9,13 +9,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="add_student.css">  
+
     <title>Add Student</title>
 </head>
 <body>
     <h1>
         Please Enter This Info
     </h1>
-    <div>
+    <div style="align-items: center;">
         <form>
             <label for="first_name">First Name</label>
             <input  type="text" name="first_name" id="first_name">
@@ -41,14 +43,18 @@
             <input  type="date" name="birthdate" id="birthdate">
             <br>
             <br>
-            <label for="gender">Gender</label>
-            <input  type="radio" name="gender" id="male">
-            <label for="male"> Male </label>
-            <input al type="radio" name="gender" id="female">
-            <label for="female"> Female </label>
+            <div class="container">
+                <p>Gender</p>
+                <div class="radio-container">
+                    <input checked="checked" type="radio" name="gender" value="1" id="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" value="0" id="female" />
+                    <label for="female">Female</label>
+                </div>
+                </div> 
             <br>
             <br>
-            <input type="submit" value="ADD STUDENT">
+            <input type="submit" value="ADD STUDENT" class = "ADD_STUDENT">
 
             </form>
     </div>
