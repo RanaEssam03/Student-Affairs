@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Assignment</title>
+    <link rel="stylesheet" href="Department_Assignment.css">
+</head>
+
+<body>
+    <div id="logo">
+        <img src="../Images/logo-color.png" alt="Website logo">
+        <a href="../view_student_screen.html">View</a>
+        <a href="../Homa_page.html">Home</a>
+    </div>
+    <h1>Department Assignment</h1>
+    <h2>Student: </h2>
+    <div id="formdiv">
+        <form action="" id="form">
+            <div id="rows">
+                <div class="columns">
+                    <label for="id" class="labels">ID: </label>
+                    <input type="text" id="id" name="id" class="theInputs">
+                </div>
+                <div class="columns">
+                    <label for="name" class="labels">Full Name: </label>
+                    <input type="text" id="name" name="name" class="theInputs">
+                </div>
+                <div class="columns">
+                    <label for="department" class="labels">Department: </label>
+                    <select name="dep" id="department" class="theInputs">
+                        <option value="" selected>Select your Department</option>
+                        <option value="ai">Artificial Intelligence - AI</option>
+                        <option value="cs">Computer Science - CS</option>
+                        <option value="ds">Decision Support - DS</option>
+                        <option value="is">Information Systems - IS</option>
+                        <option value="it">Information Technology - IT</option>
+                    </select>
+                </div>
+                <div id="button">
+                    <button style="background-color:#1c2d2b; color:#ffffff;">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
