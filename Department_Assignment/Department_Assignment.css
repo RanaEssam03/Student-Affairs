@@ -1,0 +1,100 @@
+body {
+    background-color: #cbcbc8;
+    color: #1c2d2b;
+    margin: 0px;
+}
+
+h1 {
+    color: #402a02;
+}
+
+input,
+select,
+option {
+    border-color: #1c2d2b;
+    background-color: #cbcbc8;
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+img {
+    width: 10%;
+    height: auto;
+    padding-left: 20px;
+}
+
+#logo {
+    background-color: #1c2d2b;
+}
+
+#formdiv {
+    width: 40%;
+    margin: auto;
+}
+
+#form {
+    width: 100%;
+}
+
+.rows {
+    width: 100%;
+    display: block;
+}
+
+.columns {
+    width: 100%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.labels {
+    width: 30%;
+    float: left;
+    font-size: large;
+}
+
+.theInputs {
+    width: 60%;
+    float: right;
+}
+
+h1 {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-right: 32%;
+}
+
+a {
+    color: #cbcbc8;
+    float: right;
+    height: 7%;
+    margin-top: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+    font-size: 14pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    margin-top: 7%;
+    font-size: large;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+#button {
+    text-align: center;
+}
+
+select {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
