@@ -20,7 +20,7 @@ option {
 img {
     width: 10%;
     height: auto;
-    padding-left: 20px;
+  
 }
 
 #logo {
@@ -70,7 +70,7 @@ h2 {
 }
 
 a {
-    color: #cbcbc8;
+    color: red;
     float: right;
     height: 7%;
     margin-top: 50px;
