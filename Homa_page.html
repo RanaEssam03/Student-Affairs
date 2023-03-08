@@ -1,30 +1,39 @@
 <!-- @author: Nour Muhammad
     @Date: 4/3/2023
-    @Description: This is the home page for the students affairs website
+    @Description: This is the home page for the student affairs website
 -->
 
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title> Student Affairs</title>
+  <title> ASA - Home Page</title>
 </head>
 
-<body>
-  <img src="Images/logo-color.png" alt="Stundents affairs logo" width="200" height="200">
-  <h1>Student Affairs</h1>
-  <ul style="line-height:300%">
-    <li><a href="add_student_screen.html">Add</a></li>
-    <li><a href="search.html">Search</a></li>
-    <li><a href="view_student_screen.html">View</a></li>
+<body style = "background-color: #cbcbc8;">
+<nav style="background-color:#1C2D2B;">
+  <div class = "heading">
+    <img src ="Images/logo-color.png" alt = "Student Affairs Logo width" width="10%" height = "10%"> 
+  </div>
+<ul class="nav-links">
+  <li style="color:#B2BEB5;"><a class="active" style="color:#B2BEB5;" href="Homa_page.html">Home</a>
+  <li style="color:#B2BEB5;"><a style="color:#B2BEB5;" href="add_student_screen.html"> Add</a></li>
+  <li style="color:#B2BEB5;"><a style="color:#B2BEB5;" href="search.html">Search</a></li>
+  <li style="color:#B2BEB5;"><a style="color:#B2BEB5;" href="view_student_screen.html">View</a></li>
   </ul>
-  <br>
+  </nav>
+  <div class="alert-box">
+    <span class="badge" style = "color:#402A02;"><b>Announcements</b></span> 
+  </div>
 </body>
 <footer>
   <p>
-    <a href="about_us.html">About us
-    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-      href="contact_us_screen.html">Contact us </a>
+    <ul class="footer-links align-left">
+    <li><a style = "color: #1C2D2B" href="about_us.html"> About us</a></li>
+    </ul>
+    <ul class="footer-links align-right">
+    <li><a style = "color: #1C2D2B" href = contact_us_screen.html">Contact us</a> </li>
+   </ul>
   </P>
-
+</footer>
 </html>
