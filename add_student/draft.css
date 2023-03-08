@@ -1,0 +1,99 @@
+
+h1 {
+    margin-bottom: 50px;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: #120d03;
+    color: #120d03;
+    font-family: Serif;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+
+
+
+input{
+    width:300px ;
+    align-items: center;
+    background-color: #b6b6b1;
+    background: -webkit-linear-gradient();
+    font-family:  sans-serif;
+    font-size: 15px;
+    border: 1px solid #314754;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: left;
+  
+
+}
+
+
+form{
+    text-align: center;
+    box-shadow: 0in;
+    background-color: #cbcbc8;
+    background: -webkit-linear-gradient();
+    display: inline-block;
+}
+
+label{
+    width: 100px;
+    font-size: large;
+    display: inline-block;
+    text-align: left;
+}
+
+
+
+  .ADD_STUDENT {
+    background: #1c2d2b;
+    text-align: center;
+    flex-wrap: wrap;
+    color: white;
+    width: 250px;
+    margin-left: 100px;
+    margin-bottom: 200px ;
+    font-family: serif;
+ }
+
+ body {
+  align-items: center;
+  text-align: center;
+  background-color: #cbcbc8;
+  color: #1c2d2b;
+  margin: 0px;
+}
+
+img {
+  width: 10%;
+  height: auto;
+  padding-left: 20px;
+}
+
+#navBar {
+  background-color: #1c2d2b;
+  padding: 17px;
+}
+
+.link {
+  color: #cbcbc8;
+  float: right;
+  height: 7%;
+  margin-top: 0.8%;
+  margin-right: 50px;
+  text-decoration: none;
+  font-size: 14pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Gender{
+  width: 50px;
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  text-align: left;
+  
+}
+

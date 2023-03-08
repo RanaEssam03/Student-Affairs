@@ -7,13 +7,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="update_info.css" /> 
     <title>Update Student</title>
 </head>
 <body>
-    <h1>
-        
-    </h1>
-    <div>
+    <nav id="navBar">
+        <a href="../Homa_page.html"><img src="../Images/logo-color.png" alt="Website logo"></a>
+        <a href="../view_student_screen.html" class="link">View</a>
+        <a href="../search/search.html" class="link">Search</a>
+        <a href="../add_student_screen.html" class="link">Add</a>
+        <a href="../Homa_page.html" class="link">Home</a>
+    </nav>
+    <div style="align-items: center;">
         <form>
             <label for="first_name">First Name </label>
             <input  type="text" name="first_name" id="first_name" value="Ahmed">
@@ -44,13 +52,13 @@
             <br>
             <br>
             <label for="gender">Gender</label>
-            <input  type="radio" name="gender" id="male" value="" checked>
-            <label for="male"> Male </label>
-            <input al type="radio" name="gender" id="female">
-            <label for="female"> Female </label>
+            <input  type="radio" name="gender" id="male" value="" class="Gender">
+            <label for="male" class="Gender"> Male </label>
+            <input al type="radio" name="gender" id="female" class="Gender">
+            <label for="female" class="Gender"> Female </label>
             <br>
             <br>
-            <input type="submit" value="UBDATE">
+            <input type="submit" value="UBDATE" class = "UBDATE">
 
             </form>
     </div>
