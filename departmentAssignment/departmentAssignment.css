@@ -4,27 +4,39 @@ body {
     margin: 0px;
 }
 
-h1 {
-    color: #402a02;
-}
-
-input,
-select,
-option {
-    border-color: #1c2d2b;
-    background-color: #cbcbc8;
-    border-width: 1px;
-    border-radius: 6px;
-}
-
 img {
     width: 10%;
     height: auto;
     padding-left: 20px;
 }
 
-#logo {
+#navBar {
     background-color: #1c2d2b;
+    padding: 17px;
+}
+
+.link {
+    color: #cbcbc8;
+    float: right;
+    height: 7%;
+    margin-top: 0.8%;
+    margin-right: 50px;
+    text-decoration: none;
+    font-size: 14pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    color: #402a02;
+}
+
+input,
+select,
+button {
+    border-color: #1c2d2b;
+    background-color: #aeb2ac;
+    border-width: 1px;
+    border-radius: 10px;
 }
 
 #formdiv {
@@ -56,6 +68,7 @@ img {
 .theInputs {
     width: 60%;
     float: right;
+    padding: 4px;
 }
 
 h1 {
@@ -69,17 +82,6 @@ h2 {
     margin-right: 32%;
 }
 
-a {
-    color: #cbcbc8;
-    float: right;
-    height: 7%;
-    margin-top: 50px;
-    margin-right: 50px;
-    text-decoration: none;
-    font-size: 14pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 button {
     margin-top: 7%;
     font-size: large;
@@ -87,7 +89,7 @@ button {
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border-radius: 5px;
+    cursor: pointer;
 }
 
 #button {

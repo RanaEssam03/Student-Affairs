@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department Assignment</title>
-    <link rel="stylesheet" href="Department_Assignment.css">
+    <link rel="stylesheet" href="departmentAssignment.css">
 </head>
 
 <body>
-    <div id="logo">
-        <img src="../Images/logo-color.png" alt="Website logo">
-        <a href="../view_student_screen.html">View</a>
-        <a href="../Homa_page.html">Home</a>
-    </div>
+    <nav id="navBar">
+        <a href="../Homa_page.html"><img src="../Images/logo-color.png" alt="Website logo"></a>
+        <a href="../view_student_screen.html" class="link">View</a>
+        <a href="../search/search.html" class="link">Search</a>
+        <a href="../add_student_screen.html" class="link">Add</a>
+        <a href="../Homa_page.html" class="link">Home</a>
+    </nav>
     <h1>Department Assignment</h1>
     <h2>Student: </h2>
     <div id="formdiv">
@@ -22,15 +24,15 @@
             <div id="rows">
                 <div class="columns">
                     <label for="id" class="labels">ID: </label>
-                    <input type="text" id="id" name="id" class="theInputs">
+                    <input type="text" id="id" name="id" class="theInputs" required>
                 </div>
                 <div class="columns">
                     <label for="name" class="labels">Full Name: </label>
-                    <input type="text" id="name" name="name" class="theInputs">
+                    <input type="text" id="name" name="name" class="theInputs" required>
                 </div>
                 <div class="columns">
                     <label for="department" class="labels">Department: </label>
-                    <select name="dep" id="department" class="theInputs">
+                    <select name="dep" id="department" class="theInputs" required>
                         <option value="" selected>Select your Department</option>
                         <option value="ai">Artificial Intelligence - AI</option>
                         <option value="cs">Computer Science - CS</option>
