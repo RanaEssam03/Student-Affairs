@@ -1,76 +1,79 @@
-<!--@auhter: Noor Eyad
-    @Date: 3/3/2023
-    @Description: This file is to view students on screen and be able to edit it
--->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>View Student Activity Log</title>
+  <meta charset="UTF-8">
+  <title>View Student Activity Log</title>
 </head>
-
 <body>
-    <div class="row">
-        <div class="block">
-
-            <div>
-                <img src="Images/icon.jpg" alt="Student Image" style="float: left" width="100" height="100">
-                <h3>Noor Eyad Eissa</h3>
-                <ul style="list-style-type: none">
-                    <li>ID: 20210499</li>
-                    <li>Department: AI</li>
-                    <li>Year: 3</li>
-                </ul>
-                <a href="view_more_info.html"> <button type="button">View More Info</button> </a>
-                <a href="update_info/update_info_screen.html"> <button type="button">Edit</button></a>
-
-            </div>
-            <hr>
-
-            <div>
-                <img src="Images/icon.jpg" alt="Student Image" style="float: left" width="100" height="100">
-                <h3>Nour Mohammed Abd EL-Azim</h3>
-                <ul style="list-style-type: none">
-                    <li>ID: 20210428</li>
-                    <li>Department: IS</li>
-                    <li>Year: 3</li>
-                </ul>
-                <a href="view_more_info.html"> <button type="button">View More Info</button> </a>
-                <a href="update_info/update_info_screen.html"> <button type="button">Edit</button></a>
-
-            </div>
-            <hr>
-            <div>
-                <img src="Images/icon.jpg" alt="Student Image" style="float: left" width="100" height="100">
-                <h3>Rana Essam Ibrahim</h3>
-                <ul style="list-style-type: none">
-                    <li>ID: 20210133</li>
-                    <li>Department: CS</li>
-                    <li>Year: 3</li>
-                </ul>
-                <a href="view_more_info.html"> <button type="button">View More Info</button> </a>
-                <a href="update_info/update_info_screen.html"> <button type="button">Edit</button></a>
-
-            </div>
-            <hr>
-
-            <div>
-                <img src="Images/icon.jpg" alt="Student Image" style="float: left" width="100" height="100">
-                <h3>Merna Islam Mohammed</h3>
-                <ul style="list-style-type: none">
-                    <li>ID: 20210500</li>
-                    <li>Department: AI</li>
-                    <li>Year: 3</li>
-                </ul>
-                <a href="view_more_info.html"> <button type="button">View More Info</button> </a>
-                <a href="update_info/update_info_screen.html"> <button type="button">Edit</button></a>
-
-            </div>
-            <hr>
-        </div>
-    </div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Level</th>
+    <th>Department</th>
+    <th>GPA</th>
+    <th>Activity</th>
+  </tr>
+  <tr>
+    <td><a href="view_more_info.html">20210499</a></td>
+    <td>Noor Eyad Eissa</td>
+    <td>3</td>
+    <td>AI</td>
+    <td>3.22</td>
+    <td>
+      <label for="options"></label>
+      <select name="options" id="options">
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+    </td>
+    <td><a href="update_info/update_info_screen.html"> <button type="button">Edit</button></a></td>
+  </tr>
+  <tr>
+    <td><a href="view_more_info.html">20210428</a></td>
+    <td>Nour Mohammed Abd El-Azim</td>
+    <td>3</td>
+    <td>IS</td>
+    <td>3.5</td>
+    <td>
+      <label for="options"></label>
+      <select name="options" id="opt1">
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+    </td>
+    <td><a href="update_info/update_info_screen.html"> <button type="button">Edit</button></a></td>
+  </tr>
+  <tr>
+    <td><a href="view_more_info.html">20210133</a></td>
+    <td>Rana Essam Ibrahim</td>
+    <td>3</td>
+    <td>CS</td>
+    <td>3.8</td>
+    <td>
+      <label for="options"></label>
+      <select name="options" id="opt2">
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+    </td>
+    <td><a href="update_info/update_info_screen.html"> <button type="button">Edit</button></a></td>
+  </tr>
+  <tr>
+    <td><a href="view_more_info.html">20210500</a></td>
+    <td>erna Islam Mohammed</td>
+    <td>3</td>
+    <td>AI</td>
+    <td>3.7</td>
+    <td>
+      <label for="options"></label>
+      <select name="options" id="opt3">
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+    </td>
+    <td><a href="update_info/update_info_screen.html"> <button type="button">Edit</button></a></td>
+  </tr>
+</table>
 </body>
-
 </html>
