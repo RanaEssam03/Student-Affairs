@@ -1,0 +1,12 @@
+ [
+{
+     studenName: "Rana",
+     studenClass: 6,
+     studenSection: "a"
+    },
+    {
+     studenName: "tom",
+     studenClass: 6,
+     studenSection: "a"
+    }
+]

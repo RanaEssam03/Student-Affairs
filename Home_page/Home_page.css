@@ -1,0 +1,23 @@
+body{
+    background-color: #cbcbc8;
+    margin: 0;
+}
+#navBar {
+    background-color: #1c2d2b;
+    padding: 17px;
+}
+img {
+    width: 10%;
+    height: auto;
+    padding-left: 20px;
+}
+.link {
+    color: #cbcbc8;
+    float: right;
+    height: 7%;
+    margin-top: 0.8%;
+    margin-right: 50px;
+    text-decoration: none;
+    font-size: 14pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
