@@ -13,9 +13,11 @@ let lName = document.getElementById("last_name").value;
 let Email = document.getElementById("email").value;
 let BirthDate = document.getElementById("birthdate").value;
   let students = getData();
-
+  if(students.length == null){
+    students = [];
+  }
   let student = {
-    id: students.length,
+    id: students.length+1,
     first_name: fName,
     last_name: lName,
     email: Email,
