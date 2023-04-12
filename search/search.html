@@ -15,7 +15,7 @@
                 return true;
             }
             else {
-                alert("message");
+                alert("You must contain letters only [a-z]");
                 return false;
             }
         }
@@ -35,11 +35,11 @@
     <img src="../Images/logo-search.png" alt="Logo Image" id="bodyimg">
     <h1>Student Records Search</h1>
     <div id="formDiv">
-        <form action="../searchResults/searchResults.html">
+        <form name="form" action="../searchResults/searchResults.html">
             <label for="search"></label>
             <input type="search" id="search" name="q" placeholder="Search Student Name.." id="input" pattern="[^'\x22]+"
                 title="Only include letters [A-Z]" required>
-            <button type="submit"></button>
+            <button type="submit" onclick="allLetter(document.form.q)"></button>
         </form>
     </div>
     <footer class="footer">
