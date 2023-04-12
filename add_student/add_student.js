@@ -10,12 +10,7 @@ let BirthDate = document.getElementById("birthdate").value;
 let Level = document.getElementById("level").value;
   let students = getData();
 
-<<<<<<< Updated upstream
-=======
-  if(students.length == null){
-    students = [];
-  }
->>>>>>> Stashed changes
+ 
   let student = {
     id: students.length,
     first_name: fName,
