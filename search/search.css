@@ -1,10 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman";
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #cbcbc8;
     color: #1c2d2b;
+    height: 1000px;
     margin: 0px;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
 }
 
-img {
+#logo {
     width: 10%;
     height: auto;
     padding-left: 20px;
@@ -28,13 +50,13 @@ img {
 
 #formDiv {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 h1 {
     color: #402a02;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 input {
@@ -57,4 +79,101 @@ button {
     background-color: #aeb2ac;
     border-radius: 10px;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+}
+
+#bodyimg {
+    padding: 10px 0px;
+    margin-left: 35%;
+    margin-top: 100px;
+    width: 400px;
+    height: 120px;
+}
+
+
+
+/* STYLING FOOTER*/
+
+footer {
+    margin-top: 150px;
+    width: 100%;
+    height: 340px;
+    padding: 100px 20%;
+    background: #1c2d2b;
+    color: #bebeb8;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer div {
+    text-align: center;
+}
+
+.footer-section-about {
+    float: left;
+    width: 50%;
+    padding-right: 4.8rem;
+}
+
+.footer-section-contact {
+    float: left;
+    width: 50%;
+    padding-left: 4.8rem;
+}
+
+footer div h3 {
+    font-weight: 1000;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footerLink {
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    color: #375940;
+    margin-bottom: 5px;
+}
+
+footer .footer-bottom {
+    background-color: #aeb2ac;
+    color: #1c2d2b;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    footer {
+        background-color: #1c2d2b;
+        color: #bebeb8;
+        font-size: .8em;
+        width: 100%;
+    }
+
+    .link {
+        font-size: .8em;
+    }
+
+    #logo {
+        width: 18%;
+        height: 18%;
+    }
+
+    #bodyimg {
+        padding: 10px 0px;
+        margin-left: 35%;
+        margin-top: 100px;
+        width: 250px;
+        height: 90px;
+    }
 }

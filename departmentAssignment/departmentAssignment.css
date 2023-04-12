@@ -1,10 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman";
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #cbcbc8;
     color: #1c2d2b;
+    height: 1000px;
     margin: 0px;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
 }
 
-img {
+#logo {
     width: 10%;
     height: auto;
     padding-left: 20px;
@@ -94,4 +116,83 @@ button {
 
 #button {
     text-align: center;
+}
+
+/* STYLING FOOTER*/
+
+footer {
+    margin-top: 150px;
+    width: 100%;
+    height: 340px;
+    padding: 100px 20%;
+    background: #1c2d2b;
+    color: #bebeb8;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer div {
+    text-align: center;
+}
+
+.footer-section-about {
+    float: left;
+    width: 50%;
+    padding-right: 4.8rem;
+}
+
+.footer-section-contact {
+    float: left;
+    width: 50%;
+    padding-left: 4.8rem;
+}
+
+footer div h3 {
+    font-weight: 1000;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footerLink {
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    color: #375940;
+    margin-bottom: 5px;
+}
+
+footer .footer-bottom {
+    background-color: #aeb2ac;
+    color: #1c2d2b;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    footer {
+        background-color: #1c2d2b;
+        color: #bebeb8;
+        font-size: .8em;
+        width: 100%;
+    }
+
+    .link {
+        font-size: .8em;
+    }
+
+    #logo {
+        width: 18%;
+        height: 18%;
+    }
 }
