@@ -5,26 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Images/logo-color-tab.png">
     <link rel="stylesheet" href="search.css">
     <title>Search for Students</title>
 </head>
 
 <body>
     <nav id="navBar">
-        <a href="../Homa_page.html"><img src="../Images/logo-color.png" alt="Website logo" style="text-align: start"></a>
+        <a href="../Homa_page.html"><img src="../Images/logo-color.png" alt="Website logo" style="text-align: start"
+                id="logo"></a>
         <a href="../view_student_screen.html" class="link">View</a>
         <a href="../search/search.html" class="link">Search</a>
         <a href="../add_student/add_student_screen.html" class="link">Add</a>
         <a href="../Homa_page.html" class="link">Home</a>
-    </nav>
+            
+    </nav>
+    <img src="../Images/logo-search.png" alt="Logo Image" id="bodyimg">
     <h1>Student Records Search</h1>
     <div id="formDiv">
         <form action="../searchResults/searchResults.html">
             <label for="search"></label>
-            <input type="search" id="search" name="q" placeholder="Search Student Name.." id="input">
+            <input type="search" id="search" name="q" placeholder="Search Student Name.." id="input" pattern="[A-Za-z]"
+                title="Only include letters [A-Z]" required>
             <button type="submit"></button>
         </form>
     </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section-about">
+                <h3>About us</h3>
+                <h4>Location:</h4>
+                <p><a class="footerLink"
+                        href="https://www.google.com/maps/place/Faculty+of+Computers+and+Artificial+Intelligence+-+Cairo+University/@30.0313294,31.2085304,810m/data=!3m2!1e3!4b1!4m6!3m5!1s0x145846d0b807627d:0xb2a6ce4702edc3da!8m2!3d30.0313294!4d31.2107191!16s%2Fg%2F1yw0_wjgc">
+                        Faculty Of Computers and Artificial Intelligence - Cairo University</a></p><br>
+                <h4>Working Days:</h4>
+                <p>From Sunday to Monday - 9AM to 2PM</p>
+            </div>
+            <div class="footer-section-contact">
+                <h3>Contact us:</h3>
+                You can contact us on our<a class="footerLink" href="mailto:nooreyadd39@gmail.com">email</a><br>
+                For any complaints about the website contact our developers:
+                <a class="footerLink" href="mailto:nourmuhammad835@gmail.com">Nour Mohamed</a>
+                <a class="footerLink" href="mailto:mernaislam39@gmail.com">Merna Islam</a>
+                <a class="footerLink" href="mailto:ranaessam03@gmail.com">Rana Essam</a>
+                <a class="footerLink" href="mailto:nooreyadd39@gmail.com">Noor Eyad</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; academic-students-affairs.com | Designed by a team of professional designers
+        </div>
+    </footer>
 </body>
 
 </html>
