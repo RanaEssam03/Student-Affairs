@@ -1,5 +1,5 @@
 
-h1 {
+h1, h2 {
   padding-top: 5%;
   margin-bottom: 50px;
   margin-top: 0%;
@@ -27,6 +27,20 @@ input{
   padding: 5px;
   text-align: left;
 
+
+}
+
+button{
+  font-family:  sans-serif;
+  font-size: 15px;
+  border: 1px solid #314754;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: left;
+
+}
+button:hover{
+  background-color: #385955;
 
 }
 
@@ -97,3 +111,6 @@ img {
   
 }
 
+p{
+  color: red;
+}

@@ -10,6 +10,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script >
+        function myFunction() {
+            // Get the value of the input field with id="numb"
+            let gpa = document.getElementById("gpa").value;
+            let num = document.getElementById("phone").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(gpa) || gpa < 0 || gpa > 4) {
+              text = "\nInput not valid";
+            } else {
+              text = "";
+            }
+
+            let phoneError;
+            if (isNaN(num) || num.length != 11) {
+                phoneError = "\nInput not valid";
+              } else {
+                phoneError = "";
+              }
+
+            document.getElementById("gpaError").innerHTML = text;
+            document.getElementById("phoneNumError").innerHTML = phoneError;
+          }
+    </script>
     <link rel="stylesheet" type="text/css" href="update_info.css" /> 
     <title>Update Student</title>
 </head>
@@ -20,9 +44,12 @@
         <a href="../search/search.html" class="link">Search</a>
         <a href="../add_student_screen.html" class="link">Add</a>
         <a href="../Homa_page.html" class="link">Home</a>
-    </nav>
-    <div style="align-items: center;">
-        <form>
+    </nav>
+    <h1 style="margin-left: 6%;">
+        Update Student's Info
+    </h1>
+
+      <div style="text-align: center; " >
             <label for="first_name">First Name </label>
             <input  type="text" name="first_name" id="first_name" value="Ahmed">
             <br>
@@ -35,32 +62,39 @@
             <input  type="email" name="email" id="email" value="ahmedmohamed@gmail.com">
             <br>
             <br>
+            <div>
             <label for="phone">Phone</label>
-            <input  type="number" name="phone" id="phone" value="01145303111">
-            <br>
-            <br>
+            <input   name="phone" id="phone" value="01145303111">
+            <p id = "phoneNumError" ></p>
+            </div>
+
             <label for="gpa">GPA</label>
             <input  type="text" name="gpa" id="gpa" value="3.6">
-            <br>
-            <br>
+            <p id = "gpaError" ></p>
+            <div>
+                
+
             <label for="department">Department</label>
-            <input type = "text" name ="department" id = "department" value = "CS" disabled> 
+            <input type = "text" name ="department" id = "department" value = "CS" disabled>
+                <span id = "depError" ></span>
+            </div>
+
              <br>
-             <br>
+            <div>
             <label for="birthdate"> Birthdate</label>
             <input  type="date" name="birthdate" id="birthdate" value="2003-07-23">
+            </div>
             <br>
-            <br>
-            <label for="gender">Gender</label>
+            <label style="margin-left: -5%" >Gender</label>
             <input  type="radio" name="gender" id="male" value="" class="Gender">
             <label for="male" class="Gender"> Male </label>
             <input al type="radio" name="gender" id="female" class="Gender">
             <label for="female" class="Gender"> Female </label>
             <br>
             <br>
-            <input type="submit" value="UBDATE" class = "UBDATE">
+          <button  type="submit" class="UBDATE" onclick="myFunction()">UBDATE</button>
 
-            </form>
+
     </div>
 </body>
 </html>
