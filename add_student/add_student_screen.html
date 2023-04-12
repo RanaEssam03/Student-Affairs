@@ -56,6 +56,10 @@
             <input  type="text" name="gpa" id="gpa" placeholder="student's gpa..." required> <!--pattern="[0-4]{1}+[?.]+[0-9]{2}"-->
             <br>
             <br>
+            <label for="level">Level: </label>
+            <input  type="text" name="level" id="level" placeholder="1->4" pattern="[1-4]{1}" required> <!--pattern="[0-4]{1}+[?.]+[0-9]{2}"-->
+            <br>
+            <br>
             <label for="birthdate"> Birthdate: </label>
             <input  type="date" name="birthdate" id="birthdate" required >
             <br>
@@ -75,8 +79,9 @@
                     form.addEventListener("submit", function(e){
                         e.preventDefault();
                     console.log("the form has been submited");
+                    let students = [];
+                    pushData(students);
                     addStudent();
-                    
 
                     })
             </script>
@@ -107,6 +112,7 @@
           &copy; academic-students-affairs.com | Designed by a team of professional designers
         </div>
       </div>
+</body>
 
 
 </html>
