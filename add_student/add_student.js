@@ -9,12 +9,6 @@ function addStudent(){
   let BirthDate = document.getElementById("birthdate").value;
 let Level = document.getElementById("level").value;
   let students = getData();
-<<<<<<< HEAD
-  if(students.length == null){
-    students = [];
-  }
-=======
-
  
   let student = {
     id: students.length,
