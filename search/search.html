@@ -8,6 +8,18 @@
     <link rel="icon" href="../Images/logo-color-tab.png">
     <link rel="stylesheet" href="search.css">
     <title>Search for Students</title>
+    <script>
+        function allLetter(inputtxt) {
+            var letters = /^[A-Za-z]+$/;
+            if (inputtxt.value.match(letters)) {
+                return true;
+            }
+            else {
+                alert("message");
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -25,7 +37,7 @@
     <div id="formDiv">
         <form action="../searchResults/searchResults.html">
             <label for="search"></label>
-            <input type="search" id="search" name="q" placeholder="Search Student Name.." id="input" pattern="[A-Za-z]"
+            <input type="search" id="search" name="q" placeholder="Search Student Name.." id="input" pattern="[^'\x22]+"
                 title="Only include letters [A-Z]" required>
             <button type="submit"></button>
         </form>
