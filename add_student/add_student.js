@@ -13,7 +13,7 @@ let lName = document.getElementById("last_name").value;
 let Email = document.getElementById("email").value;
 let BirthDate = document.getElementById("birthdate").value;
   let students = getData();
-  console.log(students);
+
   let student = {
     id: students.length,
     first_name: fName,
@@ -21,9 +21,9 @@ let BirthDate = document.getElementById("birthdate").value;
     email: Email,
     birthdate: BirthDate,
     gpa: GPA,
-    phone: phoneNum
+    phone: phoneNum,
+    department:null,
   }
-  console.log(student);
   students.push(student);
 
   pushData(students);
@@ -73,6 +73,9 @@ function pushData(students){
 function getData(){
   let students = localStorage.getItem("students");
   students = JSON.parse(students);
+  // while(students.length){
+  //   students.pop();
+  // }
 
   return students;
 }
