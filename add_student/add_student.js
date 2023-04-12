@@ -2,23 +2,21 @@
 function addStudent(){
 
   let GPA = document.getElementById("gpa").value;
-let phoneNum = document.getElementById("phone").value;
-let fName = document.getElementById("first_name").value;
-let lName = document.getElementById("last_name").value;
-let Email = document.getElementById("email").value;
-let BirthDate = document.getElementById("birthdate").value;
+  let phoneNum = document.getElementById("phone").value;
+  let fName = document.getElementById("first_name").value;
+  let lName = document.getElementById("last_name").value;
+  let Email = document.getElementById("email").value;
+  let BirthDate = document.getElementById("birthdate").value;
 let Level = document.getElementById("level").value;
   let students = getData();
 
-<<<<<<< Updated upstream
-=======
   if(students.length == null){
     students = [];
   }
->>>>>>> Stashed changes
+
   let student = {
     id: students.length,
-    first_name: fName,
+    first_name: fName + " ",
     last_name: lName,
     email: Email,
     birthdate: BirthDate,
@@ -26,6 +24,7 @@ let Level = document.getElementById("level").value;
     phone: phoneNum,
     level: Level,
     department:null,
+    level:null
   }
   students.push(student);
 
