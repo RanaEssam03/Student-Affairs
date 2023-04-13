@@ -21,7 +21,7 @@ let Level = document.getElementById("level").value;
     phone: phoneNum,
     level: Level,
     department:null,
-    level:null
+    level:Level
   }
   students.push(student);
 
