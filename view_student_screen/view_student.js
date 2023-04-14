@@ -27,10 +27,31 @@ function pushData(students){
           "<option>Inactive</option>\n" +
           "</select>\n" +
           "</td>" +
-          "<td><a class=\"button\" href=\"../update_info/update_info_screen.html\"><button type=\"button\">Edit</button></a></td>\n" +
+          "<td><a class=\"button\" href=\"../update_info/update_info_screen.html\" onclick= setId("+students[i].id+")><button type=\"button\"  >Edit</button></a></td>\n" +
           "<td><a class=\"button\" href=\"../view_more_info/view_more_info.html\"><button type=\"button\">View Info</button></a></td>\n"
           + "</tr>"
       )
     }
   }
+
+  function setId(id){
+    localStorage.setItem("id", JSON.stringify(id));
+  }
+
+  
+function pushData(students){
+  localStorage.setItem("students", JSON.stringify(students));
+
+}
+
+function getData(){
+  let students = localStorage.getItem("students");
+  students = JSON.parse(students);
+  // while(students.length){                  //  uncomment these lines to clear the local storage  
+  //   students.pop();
+  // }
+
+  return students;
+}
+
   

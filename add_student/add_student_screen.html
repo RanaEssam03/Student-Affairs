@@ -27,7 +27,7 @@
         <a href="../Homa_page.html" class="link">Home</a>
         </nav>
         <!-- <h1 style="margin-left: 7%;"> ADD STUDUENT </h1> -->
-        <h1 style="margin-left: 6%;">
+        <h1 style="margin-left: 3%;">
             Please Enter This Info 
             To Add
             <br>
@@ -66,9 +66,9 @@
             <br>
        
                 <label style="padding-right : 75px">Gender:    </label>
-                    <input type="radio" name="gender" id="male" class="Gender" >
+                    <input type="radio" name="gender" id="male" class="Gender" required >
                     <label for="male" class="Gender">Male </label>
-                    <input type="radio" name="gender" id="female" class="Gender" >
+                    <input type="radio" name="gender" id="female" class="Gender" required >
                     <label for="female" class="Gender">Female </label>
             <br>
             <br>
@@ -77,9 +77,10 @@
             <script>
                     const form = document.getElementById("form");
                     form.addEventListener("submit", function(e){
-                        e.preventDefault();
+                      // e.preventDefault();
                     console.log("the form has been submited");
-              
+                     //let students = [];
+                     // pushData(students); 
                     addStudent();
 
                     })

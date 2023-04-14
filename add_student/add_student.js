@@ -1,6 +1,6 @@
 
 function addStudent(){
-
+  let cnt = localStorage.getItem("cnt");
   let GPA = document.getElementById("gpa").value;
   let phoneNum = document.getElementById("phone").value;
   let fName = document.getElementById("first_name").value;
@@ -12,7 +12,7 @@ let Level = document.getElementById("level").value;
 
  
   let student = {
-    id: students.length,
+    id: 20210000+cnt,
     first_name: fName + " ",
     last_name: lName,
     email: Email,
@@ -20,8 +20,10 @@ let Level = document.getElementById("level").value;
     gpa: GPA,
     phone: phoneNum,
     level: Level,
-    department:null,
+    department:"General",
   }
+  cnt++;
+  localStorage.setItem("cnt", cnt);
   students.push(student);
 
   pushData(students);

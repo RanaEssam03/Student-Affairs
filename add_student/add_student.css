@@ -15,8 +15,8 @@ h1, h2 {
 
 
 
-input{
-  width:300px ;
+input[type = "text"],input[type = "date"], input[type = "tel"] {
+  width:350px ;
   align-items: center;
   background-color: #b6b6b1;
   background: -webkit-linear-gradient();
@@ -26,7 +26,7 @@ input{
   border-radius: 10px;
   padding: 5px;
   text-align: left;
-
+  height: 26px;
 
 }
 
@@ -66,12 +66,18 @@ label{
   text-align: center;
   flex-wrap: wrap;
   color: white;
-  width: 250px;
-  margin-left: 100px;
+  width: 360px;
+  /* margin-left: 50px; */
+  border-color: white;
+  box-shadow: inset;
   /* margin-bottom: 200px ; */
   font-family: serif;
+  font-size: 18px;
+  height: 45px;
+  font-weight: bold;
+  margin-left: 23%;
+  margin-top: 20px;
 }
-
 
 
 body {
@@ -89,6 +95,9 @@ img {
 #navBar {
   background-color: #1c2d2b;
   padding: 17px;
+  width: 100%;
+ 
+
 }
 
 .link {
@@ -121,6 +130,8 @@ img {
 /*    box-sizing: border-box;*/
 /*    align-items: center;*/
 /*}*/
+
+
 
 .footer{
   margin-top: 150px;
