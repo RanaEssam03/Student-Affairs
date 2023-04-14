@@ -44,14 +44,5 @@ function pushData(students){
 
 }
 
-function getData(){
-  let students = localStorage.getItem("students");
-  students = JSON.parse(students);
-  // while(students.length){                  //  uncomment these lines to clear the local storage  
-  //   students.pop();
-  // }
-
-  return students;
-}
 
   

@@ -55,20 +55,21 @@ function viewStudent(){
        " <br>"+
        " <br>"+
        " <label for=\"email\">Email:</label>"+
-       " <input  type=\"email\" name=\"email\" id=\"email\" value="+student.email+">"+
+       " <input  type=\"email\" name=\"email\" id=\"email\" value="+student.email+"  pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$\" >"+
        " <br>"+
        " <br>"+
       "  <label for=\"phone\">Phone:</label>"+
-        "<input   name=\"phone\" id=\"phone\" value="+student.phone+">"+
+        "<input   name=\"phone\" id=\"phone\" value="+student.phone+"  pattern=\"[0-9]{11}\">"+
         "<br>"+
         "<br>"+
         "<label for=\"level\">Level:</label>"+
-        "<input  type=\"text\" name=\"level\" id=\"level\" value="+student.level+">"+
+        "<input  type=\"text\" name=\"level\" id=\"level\" value="+student.level+" pattern=\"[1-4]{1}\">"+
         "<br>"+
         "<br>"+
         "<label for=\"gpa\">GPA:</label>"+
         "<input  type=\"text\" name=\"gpa\" id=\"gpa\" value="+student.gpa+">"+
-        "<p id = \"gpaError\" ></p>"+
+        "<br>"+
+        "<br>"+
         "<label for=\"department\">Department:</label >"+
         "<input  type=\"text\" name=\"department\" id=\"department\" value="+student.department+" disabled>"+
         "<br>"+
