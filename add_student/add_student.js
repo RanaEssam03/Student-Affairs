@@ -12,7 +12,7 @@ let Level = document.getElementById("level").value;
 
  
   let student = {
-    id: 20210000+cnt,
+    id: 20210000+parseInt(cnt),
     first_name: fName + " ",
     last_name: lName,
     email: Email,
