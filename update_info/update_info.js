@@ -55,7 +55,7 @@ function viewStudent(){
        " <br>"+
        " <br>"+
        " <label for=\"id\">ID:</label>"+
-       " <input  type=\"text\" name=\"id\" id=\"id\" value="+student.id+"  required>"+
+       " <input  type=\"text\" name=\"id\" id=\"id\" value="+student.id+"  disabled>"+
          " <br>"+
          " <br>"+
          "<label for=\"level\">Level:</label>"+

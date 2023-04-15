@@ -27,6 +27,7 @@ function addStudent(){
     phone: phoneNum,
     level: Level,
     department:"General",
+    state: false,
   }
   cnt++;
   localStorage.setItem("cnt", cnt);
