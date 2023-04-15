@@ -99,13 +99,7 @@ img {
   padding-left: 20px;
 }
 
-#navBar {
-  background-color: #1c2d2b;
-  padding: 17px;
-  width: 100%;
- 
 
-}
 
 .link {
   color: #cbcbc8;
@@ -127,6 +121,14 @@ img {
   
 }
 
+#navBar {
+  background-color: #1c2d2b;
+  padding: 17px;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+
+
+}
 
 /*STYLING FOR THE FOOTER*/
 

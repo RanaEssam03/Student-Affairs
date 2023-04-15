@@ -54,24 +54,28 @@ function viewStudent(){
         "<input  type=\"text\" name=\"last_name\" id=\"last_name\" value="+student.last_name+">"+
        " <br>"+
        " <br>"+
+       " <label for=\"id\">ID:</label>"+
+       " <input  type=\"text\" name=\"id\" id=\"id\" value="+student.id+"  required>"+
+         " <br>"+
+         " <br>"+
+         "<label for=\"level\">Level:</label>"+
+         "<input  type=\"text\" name=\"level\" id=\"level\" value="+student.level+" pattern=\"[1-4]{1}\">"+
+         "<br>"+
+         "<br>"+
+         "<label for=\"gpa\">GPA:</label>"+
+         "<input  type=\"text\" name=\"gpa\" id=\"gpa\" value="+student.gpa+">"+
+         "<br>"+
+         "<br>"+
+         "<label for=\"department\">Department:</label >"+
+         "<input  type=\"text\" name=\"department\" id=\"department\" value="+student.department+" disabled>"+
+         "<br>"+
+         "<br>"+
        " <label for=\"email\">Email:</label>"+
        " <input  type=\"email\" name=\"email\" id=\"email\" value="+student.email+"  pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$\" >"+
        " <br>"+
        " <br>"+
       "  <label for=\"phone\">Phone:</label>"+
         "<input   name=\"phone\" id=\"phone\" value="+student.phone+"  pattern=\"[0-9]{11}\">"+
-        "<br>"+
-        "<br>"+
-        "<label for=\"level\">Level:</label>"+
-        "<input  type=\"text\" name=\"level\" id=\"level\" value="+student.level+" pattern=\"[1-4]{1}\">"+
-        "<br>"+
-        "<br>"+
-        "<label for=\"gpa\">GPA:</label>"+
-        "<input  type=\"text\" name=\"gpa\" id=\"gpa\" value="+student.gpa+">"+
-        "<br>"+
-        "<br>"+
-        "<label for=\"department\">Department:</label >"+
-        "<input  type=\"text\" name=\"department\" id=\"department\" value="+student.department+" disabled>"+
         "<br>"+
         "<br>"+
         "<label for=\"birthdate\"> Birthdate:</label>"+
