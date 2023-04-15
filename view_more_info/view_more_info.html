@@ -9,10 +9,15 @@
     <meta charset = "UTF-8">
     <meta http-equiv="X-UA-Compatible" content = "IE = edge">
     <meta name = "viewport" conetnt = "width=device-width, initial-scale=1.0">
+    <script src = "view_more_info.js">
+    </script>
     <link rel="stylesheet" href="view_more_info.css">
     <title>More Info</title>
 </head>
 <body>
+    <script>
+        get_student();
+    </script>
     <nav id="navBar">
         <a href="../Homa_page.html"><img src="../Images/logo-color.png" alt="Website logo" style="text-align: start"></a>
         <a href="../view_student_screen/view_student_screen.html" class="link">View</a>
@@ -26,41 +31,43 @@
         <caption>Student's Full Info</caption>
         <tr class="dark", style="border-bottom: 1px dashed #1c2d2b;">
             <th >First Name</th>
-            <td >Nour</td>
+            <td id = "fisrtName">Nour</td>
         </tr>
         <tr style="border-bottom: 1px dashed #1c2d2b;">
             <th class = "light">Last Name</th>
-            <td >Muhammad</td>
+            <td id = "lastName">Muhammad</td>
         </tr>
         <tr class = "dark", style="border-bottom: 1px dashed #1c2d2b;">
             <th>ID</th>
-            <td >20210428</td>
+            <td id = "id">20210428</td>
         </tr>
         <tr style="border-bottom: 1px dashed #1c2d2b;">
             <th >Phone</th>
-            <td >01114335538</td>
+            <td id = "phone">01114335538</td>
         </tr>
         <tr class = "dark", style="border-bottom: 1px dashed #1c2d2b;">
             <th >Email</th>
-            <td ><a href= "mailto:nourmuhammad835@gmail.com">Student's gmail</a></td>
+            <td id = "email"><a href= "mailto:nourmuhammad835@gmail.com">Student's gmail</a></td>
         </tr>
    
         <tr style="border-bottom: 1px dashed #1c2d2b;">
             <th >GPA</th>
-            <td >3.5</td>
+            <td id ="gpa">3.5</td>
         </tr>
         <tr class="dark", style="border-bottom: 1px dashed #1c2d2b;">
             <th >Department</th>
-            <td >IS</td>
+            <td id = "department">IS</td>
         </tr>
         <tr style="border-bottom: 1px dashed #1c2d2b;">
             <th >Birthdate</th>
-            <td >22/10/2003</td>
+            <td id = "birthdate">22/10/2003</td>
         </tr>
         <tr class = "dark", style="border-bottom: 1px dashed #1c2d2b;">
             <th >Gender</th>
-            <td >Female</td>
+            <td id = "gender">Female</td>
         </tr>
     </table>
+    <script>view_student();</script>
 </body>
+<script> src = "view_more_"  </script>
 </html>
