@@ -28,7 +28,7 @@ function pushData(students){
           "</select>\n" +
           "</td>" +
           "<td><a class=\"button\" href=\"../update_info/update_info_screen.html\" onclick= setId("+students[i].id+")><button type=\"button\"  >Edit</button></a></td>\n" +
-          "<td><a class=\"button\" href=\"../view_more_info/view_more_info.html\"><button type=\"button\">View Info</button></a></td>\n"
+          "<td><a class=\"button\" href=\"../view_more_info/view_more_info.html\" onclick= setId("+students[i].id+")><button type=\"button\">View Info</button></a></td>\n"
           + "</tr>"
       )
     }
