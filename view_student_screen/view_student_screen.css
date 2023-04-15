@@ -215,3 +215,46 @@ footer .footer-bottom{
     }
 
 }
+
+/*STYLING THE BUTTONS*/
+
+button{
+    color: #1c2d2b;
+    padding: 5px;
+    background-color: #cbcbc8;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    width: 50%;
+    margin-bottom: 0;
+    border: 1px solid #adada2;
+}
+
+button:hover{
+    background-color: #1c2d2b;
+    cursor: pointer;
+    color: #cbcbc8;
+}
+
+/*STYLING THE DROPDOWN LIST*/
+
+.dropdown {
+    padding: 5px;
+    color: #1c2d2b;
+    background-color: #cbcbc8;
+    border: 1px solid #adada2;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.dropdown:hover{
+    background-color: #1c2d2b;
+    cursor: pointer;
+    color: #cbcbc8;
+}
