@@ -99,13 +99,7 @@ img {
   padding-left: 20px;
 }
 
-#navBar {
-  background-color: #1c2d2b;
-  padding: 17px;
-  width: 100%;
- 
 
-}
 
 .link {
   color: #cbcbc8;
@@ -127,6 +121,14 @@ img {
   
 }
 
+#navBar {
+  background-color: #1c2d2b;
+  padding: 17px;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+
+
+}
 
 /*STYLING FOR THE FOOTER*/
 
@@ -145,8 +147,8 @@ img {
   width: 100%;
   height: 300px;
   padding: 100px 20%;
-  background: #adada2;
-  color: #1c2d2b;
+  color: #bdbdb9;
+  background-color: #1c2d2b;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -169,17 +171,23 @@ img {
   width: 50%;
 }
 
-.footer div h3{
+.footer div h3, .footer div h4{
   font-weight: 1000;
   margin-bottom: 20px;
   letter-spacing: 1px;
+  color: #946714;
+}
+
+.footer div h4{
+  margin-top: 10px; 
+
 }
 
 .footerLink{
   font-weight: 600;
   display: block;
   text-decoration: none;
-  color: #375940;
+  color: #acb4b0;
   margin-bottom: 5px;
 }
 

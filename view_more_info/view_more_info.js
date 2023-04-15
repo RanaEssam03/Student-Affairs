@@ -28,7 +28,7 @@ function view_student(){
     student = get_student();
     console.log(student);
     document.getElementById('id').innerHTML = student.id;
-    document.getElementById('firstName').innerHTML = student.fisrt_name;
+    document.getElementById('firstName').innerHTML = student.first_name;
     document.getElementById('lastName').innerHTML = student.last_name;
     document.getElementById('gpa').innerHTML = student.gpa;
     //document.getElementById('gender').innerHTML = student.gender;
