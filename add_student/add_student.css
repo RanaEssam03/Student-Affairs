@@ -5,7 +5,7 @@
 
 }
 h1, h2 {
-  padding-top: 2%;
+  padding-top: 7%;
   margin-bottom: 40px;
   margin-top: 0%;
   align-items: center;
@@ -64,6 +64,9 @@ label{
   text-align: left;
 }
 
+body{
+  margin-top: 5%;
+}
 
 
 .ADD_STUDENT {
@@ -125,7 +128,9 @@ img {
   background-color: #1c2d2b;
   padding: 17px;
   width: 100%;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  position: fixed;
+  top: 0;
+  /* box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); */
 
 
 }

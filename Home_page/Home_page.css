@@ -10,10 +10,17 @@ body{
     background-color: #cbcbc8;
     margin: 0;
 }
+
+   
 #navBar {
-    background-color: #1c2d2b;
-    padding: 17px;
+  background-color: #1c2d2be9;
+  padding: 17px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
+
 img {
     width: 10%;
     height: auto;

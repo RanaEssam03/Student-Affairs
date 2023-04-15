@@ -10,8 +10,12 @@ body{
     margin: 0px;
 }
 #navBar {
-    background-color: #1c2d2b;
-    padding: 17px;
+  background-color: #1c2d2b;
+  padding: 17px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
 }
 img {
     width: 10%;
@@ -51,6 +55,7 @@ table{
     padding-left: 10px;
     padding-right: 10px;
     text-decoration:underline;
+    margin-top: 7.5%;
   }
   th{
     text-align: center;
