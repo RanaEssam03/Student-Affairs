@@ -24,7 +24,7 @@ function confirmDeletion(){
 function updateStudent(){
     let Id = localStorage.getItem("id");
 
-    let fName = document.getElementById("first_name").value;
+    let fName = document.getElementById("first_name").value + " ";
     let lName = document.getElementById("last_name").value;
     let Email = document.getElementById("email").value;
     let phoneNum = document.getElementById("phone").value;

@@ -10,7 +10,7 @@ h1, h2 {
   margin-top: 0%;
   align-items: center;
   box-shadow: #120d03;
-  color: #120d03;
+  color: #402a02;
   font-family: Serif;
   font-size: 30px;
   text-align: center;
@@ -45,7 +45,9 @@ button{
 
 }
 button:hover{
-  background-color: #385955;
+  background-color: #cbcbc8;
+  color: #1c2d2b;
+  border: 1px solid #1c2d2b;
 
 }
 
