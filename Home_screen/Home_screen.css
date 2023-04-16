@@ -1,0 +1,78 @@
+
+h1,h2{
+    text-align: center;
+    color:#77510b;
+    margin-top: 20px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+#course-code{
+   margin-top: 70px;
+}
+
+body{
+    background-color: #cbcbc8;
+}
+
+h4{
+   text-align: center;
+   margin-left: 15px;
+   color: #1c2d2b;
+   font-family: 'Arial Narrow Bold', sans-serif;
+   padding-top: 20px;
+}
+.container{
+    width: 80%;
+    margin: auto; /*to align it at the center*/
+    margin-bottom: 30px;
+ }
+ .container h2{
+    color: #b1770b;
+    text-align: center;
+    margin: 30px 30px 60px; /* top  (right&left) buttom*/
+    font-family: 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+ }
+ .container h2::before, .container h2::after{ /*to put dashes before and after"projects"*/
+    content: "-----";
+    letter-spacing: -5px;
+    font-weight: lighter;
+    margin: 0 20px 0 10px;
+ }
+
+ .container .row{
+    display: flex; /* To make all columns in one row on horizontal line */ 
+    /* justify-content: space-between; */
+ } 
+ 
+ .container .column{
+    width: 90%;
+    height: auto;
+   position: relative; /*changes the position of the element relative to the parent element and relative to itself */
+    overflow: hidden; /*prevent elements from overflow*/
+    background-color: #acb4b0;
+    border-radius: 30px;
+    margin: 10px;
+ }
+
+ .container .column img{
+    width: 100%;
+    height: 75%;
+ }
+
+.container .column a:last-child{
+   position: absolute;
+   display: block;
+   width: 100%;
+   background-color: #1c2d2bb7;
+   text-align: center;
+   padding-top: 12vw;
+   font-size: 2vw;
+   color: #cbcbc8;
+   text-decoration: none;
+}
+.container .column:hover a:last-child{
+   height: 100%; /* needed to make the shadow appear on the full height*/
+   top: 0; /*needed to make the shadow appear*/
+   border-radius: 10px;
+   transition-duration: 0.7s;
+}
