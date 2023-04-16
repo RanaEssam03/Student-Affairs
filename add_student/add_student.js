@@ -9,6 +9,7 @@ function addStudent(){
   let Email = document.getElementById("email").value;
   let BirthDate = document.getElementById("birthdate").value;
   let Level = document.getElementById("level").value;
+  let Gender =  document.querySelector('input[name = gender]:checked').value;
 
   let students = getData();
 
@@ -28,6 +29,7 @@ function addStudent(){
     level: Level,
     department:"General",
     state: false,
+    gender: Gender
   }
   cnt++;
   localStorage.setItem("cnt", cnt);
