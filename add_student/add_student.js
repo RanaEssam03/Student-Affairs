@@ -28,7 +28,7 @@ function addStudent() {
     phone: phoneNum,
     level: Level,
     department: "General",
-    state: false,
+    state: "false",
     gender: Gender
   }
   cnt++;
@@ -53,7 +53,7 @@ function pushData(students) {
 function getData() {
   let students = localStorage.getItem("students");
   students = JSON.parse(students);
-  // while(students.length){                  //  uncomment these lines to clear the local storage  
+  // while(students.length){                  //  uncomment these lines to clear the local storage
   //   students.pop();
   // }
 

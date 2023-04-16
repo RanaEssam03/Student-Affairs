@@ -10,6 +10,20 @@ function pushData(students){
     return students;
   }
 
+  function changeState(id){
+      let students = getData();
+      let index;
+      for (let i = 0; i < students.length; i++){
+          if (students[i].id == id){
+              index = i;
+              break;
+          }
+      }
+      d = document.getElementById(id).value;
+      students[index].state = d;
+      pushData(students);
+  }
+
   function viewStudents(){
     let students = getData();
     let tbody = document.getElementById("table");
@@ -22,9 +36,9 @@ function pushData(students){
           "<td>" + students[i].gpa + "</td>" +
           "<td>\n" +
           "<label for=\"options\"></label>\n" +
-          " <select class=\"dropdown\"  name=\"options\" id=\"options\"" + students[i].id + ">\n" +
-          "<option>Active</option>\n" +
-          "<option>Inactive</option>\n" +
+          " <select class=\"dropdown\"  name=\"options\" onchange=\"changeState(students[i].id)\" id=" + students[i].id + ">\n" +
+          "<option value=\"false\">Inactive</option>\n" +
+          "<option value=\"true\" >Active</option>\n" +
           "</select>\n" +
           "</td>" +
           "<td><a class=\"button\" href=\"../update_info/update_info_screen.html\" onclick= setId("+students[i].id+")><button type=\"button\"  >Edit</button></a></td>\n" +
