@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Images/logo-color-tab.png">
     <link rel="stylesheet" href="search.css">
+    <script src="search.js"></script>
     <title>Search for Students</title>
     <script>
         function allLetter(inputtxt) {
-            var letters = /^[A-Za-z]+$/;
+            var letters = /^[A-Za-z\s]*$/;
             if (inputtxt.value.match(letters)) {
                 return true;
             }
@@ -24,22 +25,36 @@
 
 <body>
     <nav id="navBar">
-        <a href="../Homa_page.html"><img src="../Images/logo-color.png" alt="Website logo" style="text-align: start"
-                id="logo"></a>
-        <a href="../view_student_screen.html" class="link">View</a>
-        <a href="../search/search.html" class="link">Search</a>
-        <a href="../add_student/add_student_screen.html" class="link">Add</a>
-        <a href="../Homa_page.html" class="link">Home</a>
-            
+        <a href="../Home_page/Homa_page.html"><img src="../Images/logo-color.png" alt="Website logo"
+                style="text-align: start" id="logo"></a>
+        <input type="checkbox" id="menu_checkbox" onclick="displaymenu()">
+        <label for="menu_checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <ul id="menuList">
+            <li><a href="../Home_page/Homa_page.html" class="link">Home</a></li>
+            <li><a href="../add_student/add_student_screen.html" class="link">Add</a></li>
+            <li><a href="../search/search.html" class="link">Search</a></li>
+            <li><a href="../view_student_screen/view_student_screen.html" class="link">View</a></li>
+        </ul>
+        <div id="menuAdded" style="display: none;">
+            <ul>
+                <li><a href="../Home_page/Homa_page.html" class="linkchecked">Home</a></li>
+                <li><a href="../add_student/add_student_screen.html" class="linkchecked">Add</a></li>
+                <li><a href="../search/search.html" class="linkchecked">Search</a></li>
+                <li><a href="../view_student_screen/view_student_screen.html" class="linkchecked">View</a></li>
+            </ul>
+        </div>
     </nav>
     <img src="../Images/logo-search.png" alt="Logo Image" id="bodyimg">
     <h1>Student Records Search</h1>
     <div id="formDiv">
         <form name="form" action="../searchResults/searchResults.html">
-            <label for="search"></label>
-            <input type="search" id="search" name="q" placeholder="Search Student Name.." id="input" pattern="[^'\x22]+"
+            <input type="search" name="q" placeholder="Search Student Name.." id="search" pattern="[^'\x22]+"
                 title="Only include letters [A-Z]" required>
-            <button type="submit" onclick="allLetter(document.form.q)"></button>
+            <button type="submit" onclick="allLetter(document.form.q); getVal();"></button>
         </form>
     </div>
     <footer class="footer">

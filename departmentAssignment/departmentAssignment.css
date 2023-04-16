@@ -1,3 +1,4 @@
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
@@ -16,14 +17,45 @@ html {
     box-sizing: inherit;
 }
 
+h1 {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    color: #402a02;
+}
+
+h2 {
+    text-align: center;
+    margin-right: 32%;
+}
+
 body {
     background-color: #cbcbc8;
     color: #1c2d2b;
-    height: 1000px;
     margin: 0px;
     min-height: 100vh;
     position: relative;
     flex-direction: column;
+}
+
+/* STYLING HEADER */
+img {
+    min-width: 103px;
+    min-height: 52px;
+}
+
+ul {
+    display: inline-block;
+    right: 0;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+#menuList {
+    float: right;
 }
 
 #logo {
@@ -34,24 +66,42 @@ body {
 
 #navBar {
     background-color: #1c2d2b;
-    padding: 17px;
+    padding: 0 1rem;
 }
 
 .link {
     color: #cbcbc8;
     float: right;
-    height: 7%;
-    margin-top: 0.8%;
-    margin-right: 50px;
+    margin-top: 0;
+    margin-right: 3rem;
     text-decoration: none;
     font-size: 14pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: inset 0 0 0 0 #0c1312;
+    padding: 1rem .5rem;
+    border-radius: 5px;
 }
 
-h1 {
-    color: #402a02;
+.link:hover {
+    box-shadow: inset 100px 0 0 0 #0c1312;
+    border-radius: 5px;
+    color: #946714;
 }
 
+.linkchecked {
+    display: none;
+}
+
+label div {
+    display: none;
+}
+
+#menu_checkbox {
+    float: right;
+    display: none;
+}
+
+/* SPECIFIC PAGE STYLING */
 input,
 select,
 button {
@@ -85,23 +135,13 @@ button {
     width: 30%;
     float: left;
     font-size: large;
+    margin-left: 5%;
 }
 
 .theInputs {
     width: 60%;
     float: right;
     padding: 4px;
-}
-
-h1 {
-    margin-top: 5%;
-    margin-bottom: 3%;
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-    margin-right: 32%;
 }
 
 button {
@@ -120,53 +160,59 @@ button {
 
 /* STYLING FOOTER*/
 
-footer {
+.footer {
     margin-top: 150px;
     width: 100%;
-    height: 340px;
+    height: 300px;
     padding: 100px 20%;
-    background: #1c2d2b;
-    color: #bebeb8;
+    color: #bdbdb9;
+    background-color: #1c2d2b;
     display: flex;
     align-items: center;
     box-sizing: border-box;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
-footer div {
+.footer div {
     text-align: center;
 }
 
 .footer-section-about {
     float: left;
     width: 50%;
-    padding-right: 4.8rem;
 }
 
 .footer-section-contact {
     float: left;
     width: 50%;
-    padding-left: 4.8rem;
 }
 
-footer div h3 {
+.footer div h3,
+.footer div h4 {
     font-weight: 1000;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    color: #946714;
+}
+
+.footer div h4 {
+    margin-top: 10px;
+
 }
 
 .footerLink {
     font-weight: 600;
     display: block;
     text-decoration: none;
-    color: #375940;
+    color: #acb4b0;
     margin-bottom: 5px;
 }
 
-footer .footer-bottom {
+.footerLink:hover {
+    color: #946714;
+}
+
+.footer .footer-bottom {
     background-color: #aeb2ac;
     color: #1c2d2b;
     height: 20px;
@@ -176,10 +222,10 @@ footer .footer-bottom {
     bottom: 0;
     left: 0;
     padding: 20px;
-    padding-bottom: 30px;
 }
 
-@media only screen and (max-width: 767px) {
+
+@media only screen and (max-width: 768px) {
     footer {
         background-color: #1c2d2b;
         color: #bebeb8;
@@ -187,12 +233,90 @@ footer .footer-bottom {
         width: 100%;
     }
 
+    img {
+        min-width: 103px;
+        min-height: 52px;
+    }
+
     .link {
         font-size: .8em;
+        display: none;
     }
 
     #logo {
         width: 18%;
         height: 18%;
+    }
+
+    label div {
+        display: block;
+    }
+
+    label {
+        display: inline-block;
+        margin-right: 2px;
+        margin-left: 70%;
+        margin-top: 5%;
+        transform: translateY(-50%);
+        transition: 0.3s ease transform;
+        cursor: pointer;
+    }
+
+    label div {
+        width: 6px;
+        height: 6px;
+        background-color: #bdbdb9;
+        margin-left: 0;
+        margin-bottom: 6px;
+        border-radius: 4px;
+        transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom,
+            0.3s ease background-color;
+    }
+
+    label div:first-child {
+        width: 22px;
+    }
+
+    label div:nth-child(2) {
+        width: 15px;
+    }
+
+    label div:last-child {
+        width: 30px;
+        margin-bottom: 0;
+    }
+
+    #menu_checkbox:checked+label {
+        transform: translateY(-50%) rotateZ(-90deg);
+    }
+
+    #menu_checkbox:checked+label div {
+        width: 6px;
+        margin-bottom: 3px;
+        background-color: #946714;
+    }
+
+    .linkchecked {
+        color: #cbcbc8;
+        content: "";
+        margin-top: 0;
+        margin-right: 1000px;
+        text-decoration: none;
+        font-size: 14pt;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        box-shadow: inset 0 0 0 0 #0c1312;
+        padding: 1rem .5rem;
+        border-radius: 5px;
+        display: block;
+    }
+
+    #menuAdded {
+        background-color: #1c2d2b;
+    }
+
+    .linkchecked:hover {
+        box-shadow: inset 100px 0 0 0 #0c1312;
+        border-radius: 5px;
+        color: #946714;
     }
 }
