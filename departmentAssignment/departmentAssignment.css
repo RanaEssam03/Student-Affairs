@@ -105,9 +105,8 @@ label div {
 input,
 select,
 button {
-    border-color: #1c2d2b;
+    border: 1px solid #1c2d2b;
     background-color: #aeb2ac;
-    border-width: 1px;
     border-radius: 10px;
 }
 
@@ -152,6 +151,16 @@ button {
     padding-top: 5px;
     padding-bottom: 5px;
     cursor: pointer;
+    background-color: #1c2d2b;
+    color: #cbcbc8;
+    border: 2px solid #1c2d2b;
+}
+
+button:hover {
+    border: 2px solid #1c2d2b;
+    background-color: #cbcbc8;
+    color: #1c2d2b;
+    transition-duration: 0.4s;
 }
 
 #button {

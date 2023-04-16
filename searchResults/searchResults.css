@@ -99,10 +99,17 @@ button {
     background-color: #1c2d2b;
     color: #cbcbc8;
     border-radius: 5px;
-    border-width: 1px;
-    border-color: #1c2d2b;
+    border: 1px solid #1c2d2b;
     padding: 4px 6px;
     cursor: pointer;
+}
+
+button:hover {
+    color: #1c2d2b;
+    background-color: #cbcbc8;
+    border-color: #cbcbc8;
+    transition-duration: 0.4s;
+    border: 1px solid #cbcbc8;
 }
 
 .lvl,
