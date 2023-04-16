@@ -21,16 +21,28 @@ function pushData(students){
           "<td>" + students[i].department + "</td>" +
           "<td>" + students[i].gpa + "</td>" +
           "<td>\n" +
-          "<label for=\"options\"></label>\n" +
-          " <select name=\"options\" id=\"options\"" + students[i].id + ">\n" +
+          "<label  for=\"options\"></label>\n" +
+          " <select class=\"dropdown\" name=\"options\" id=\"options\"" + students[i].id + ">\n" +
           "<option>Active</option>\n" +
           "<option>Inactive</option>\n" +
           "</select>\n" +
           "</td>" +
-          "<td><a class=\"button\" href=\"../update_info/update_info_screen.html\"><button type=\"button\">Edit</button></a></td>\n" +
-          "<td><a class=\"button\" href=\"../view_more_info/view_more_info.html\"><button type=\"button\">View Info</button></a></td>\n"
+          "<td><a class=\"button\" href=\"../update_info/update_info_screen.html\" onclick= setId("+students[i].id+")><button type=\"button\"  >Edit</button></a></td>\n" +
+          "<td><a class=\"button\" href=\"../view_more_info/view_more_info.html\" onclick= setId("+students[i].id+")><button type=\"button\">View Info</button></a></td>\n"
           + "</tr>"
       )
     }
   }
+
+  function setId(id){
+    localStorage.setItem("id", JSON.stringify(id));
+  }
+
+  
+function pushData(students){
+  localStorage.setItem("students", JSON.stringify(students));
+
+}
+
+
   

@@ -6,6 +6,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE = edge">
+    <meta name = "viewport" conetnt = "width=device-width, initial-scale=1.0">
+    <script src = "view_more_info.js">
+    </script>
     <link rel="stylesheet" href="view_more_info.css">
     <title>More Info</title>
 </head>
@@ -15,48 +20,74 @@
         <a href="../view_student_screen/view_student_screen.html" class="link">View</a>
         <a href="../search/search.html" class="link">Search</a>
         <a href="../add_student/add_student_screen.html" class="link">Add</a>
-        <a href="../Homa_page.html" class="link">Home</a>
+        <a href="../Home_page/Homa_page.html" class="link">Home</a>
     </nav>
 <br>
 <br>
     <table>
         <caption>Student's Full Info</caption>
-        <tr>
+        <tr class="dark", style="border-bottom: 1px dashed #1c2d2b;">
             <th >First Name</th>
-            <td >Nour</td>
+            <td id = "firstName">Nour</td>
         </tr>
-        <tr>
-            <th>Last Name</th>
-            <td >Muhammad</td>
+        <tr style="border-bottom: 1px dashed #1c2d2b;">
+            <th >Last Name</th>
+            <td id = "lastName">Muhammad</td>
         </tr>
-        <tr>
+        <tr  style="border-bottom: 1px dashed #1c2d2b;">
             <th>ID</th>
-            <td>20210428</td>
+            <td id = "id">20210428</td>
         </tr>
-        <tr>
-            <th>Email</th>
-            <td><a href= "mailto:nourmuhammad835@gmail.com">Student's gmail</a></td>
+        <tr style="border-bottom: 1px dashed #1c2d2b;">
+            <th >Phone</th>
+            <td id = "phone">01114335538</td>
         </tr>
-        <tr>
-            <th>Phone</th>
-            <td>01114335538</td>
+        <tr  style="border-bottom: 1px dashed #1c2d2b;">
+            <th >Email</th>
+            <td id = "email"><a href= "mailto:nourmuhammad835@gmail.com">Student's gmail</a></td>
         </tr>
-        <tr>
-            <th>Department</th>
-            <td >IS</td>
+   
+        <tr style="border-bottom: 1px dashed #1c2d2b;">
+            <th >GPA</th>
+            <td id ="gpa">3.5</td>
         </tr>
-        <tr>
-            <th>GPA</th>
-            <td >3.5</td>
+        <tr class="dark", style="border-bottom: 1px dashed #1c2d2b;">
+            <th >Department</th>
+            <td id = "department">IS</td>
         </tr>
-        <tr>
-            <th>Birthdate</th>
-            <td>22/10/2003</td>
+        <tr style="border-bottom: 1px dashed #1c2d2b;">
+            <th >Birthdate</th>
+            <td id = "birthdate">22/10/2003</td>
         </tr>
-        <tr>
-            <th>Gender</th>
-            <td>Female</td>
+        <tr  style="border-bottom: 1px dashed #1c2d2b;">
+            <th >Gender</th>
+            <td id = "gender">Female</td>
         </tr>
     </table>
+    <script>view_student();</script>
+    <div class="footer">
+        <div class="footer-content">
+          <div class="footer-section-about">
+            <h3>About us</h3>
+            <h3>Location:</h3>
+            <p><a class="footerLink" href="https://www.google.com/maps/place/Faculty+of+Computers+and+Artificial+Intelligence+-+Cairo+University/@30.0313294,31.2085304,810m/data=!3m2!1e3!4b1!4m6!3m5!1s0x145846d0b807627d:0xb2a6ce4702edc3da!8m2!3d30.0313294!4d31.2107191!16s%2Fg%2F1yw0_wjgc">
+              Faculty Of Computers and Artificial Intelligence - Cairo University</a></p>
+            <h4>Working Days:</h4>
+            <p>From Sunday to Monday - 9AM to 2PM</p>
+          </div>
+          <div class="footer-section-contact">
+            <h3>Contact Us:</h3>
+              You can contact us on our<a class="footerLink" href="mailto:nooreyadd39@gmail.com">email</a><br>
+              For any complaints about the website contact our developers:
+              <a class="footerLink" href="mailto:nourmuhammad835@gmail.com">Nour Mohamed</a>
+              <a class="footerLink" href="mailto:mernaislam39@gmail.com">Merna Islam</a>
+              <a class="footerLink" href="mailto:ranaessam03@gmail.com">Rana Essam</a>
+              <a class="footerLink" href="mailto:nooreyadd39@gmail.com">Noor Eyad</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; academic-students-affairs.com | Designed by a team of professional designers
+        </div>
+      </div>
 </body>
 </html>

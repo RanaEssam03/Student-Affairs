@@ -10,91 +10,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script >
-        function myFunction() {
-            // Get the value of the input field with id="numb"
-            let gpa = document.getElementById("gpa").value;
-            let num = document.getElementById("phone").value;
-            // If x is Not a Number or less than one or greater than 10
-            let text;
-            if (isNaN(gpa) || gpa < 0 || gpa > 4) {
-              text = "\nInput not valid";
-            } else {
-              text = "";
-            }
-
-            let phoneError;
-            if (isNaN(num) || num.length != 11) {
-                phoneError = "\nInput not valid";
-              } else {
-                phoneError = "";
-              }
-
-            document.getElementById("gpaError").innerHTML = text;
-            document.getElementById("phoneNumError").innerHTML = phoneError;
-          }
+    <script src ="update_info.js" >
+        
     </script>
     <link rel="stylesheet" type="text/css" href="update_info.css" /> 
     <title>Update Student</title>
-</head>
-<body>
     <nav id="navBar">
         <a href="../Homa_page.html"><img src="../Images/logo-color.png" alt="Website logo" style="text-align: start"></a>
         <a href="../view_student_screen/view_student_screen.html" class="link">View</a>
         <a href="../search/search.html" class="link">Search</a>
         <a href="../add_student/add_student_screen.html" class="link">Add</a>
-        <a href="../Homa_page.html" class="link">Home</a>
+        <a href="../Home_page/Homa_page.html" class="link">Home</a>
     </nav>
     <h1 style="margin-left: 6%;">
         Update Student's Info
     </h1>
-
-      <div style="text-align: center; " >
-            <label for="first_name">First Name </label>
-            <input  type="text" name="first_name" id="first_name" value="Ahmed">
-            <br>
-            <br>
-            <label for="last_name">Last Name</label>
-            <input  type="text" name="last_name" id="last_name" value="Mohamed">
-            <br>
-            <br>
-            <label for="email">Email</label>
-            <input  type="email" name="email" id="email" value="ahmedmohamed@gmail.com">
-            <br>
-            <br>
-            <div>
-            <label for="phone">Phone</label>
-            <input   name="phone" id="phone" value="01145303111">
-            <p id = "phoneNumError" ></p>
-            </div>
-
-            <label for="gpa">GPA</label>
-            <input  type="text" name="gpa" id="gpa" value="3.6">
-            <p id = "gpaError" ></p>
-            <div>
-                
-
-            <label for="department">Department</label>
-            <input type = "text" name ="department" id = "department" value = "CS" disabled>
-                <span id = "depError" ></span>
-            </div>
-
-             <br>
-            <div>
-            <label for="birthdate"> Birthdate</label>
-            <input  type="date" name="birthdate" id="birthdate" value="2003-07-23">
-            </div>
-            <br>
-            <label style="margin-left: -5%" >Gender</label>
-            <input  type="radio" name="gender" id="male" value="" class="Gender">
-            <label for="male" class="Gender"> Male </label>
-            <input al type="radio" name="gender" id="female" class="Gender">
-            <label for="female" class="Gender"> Female </label>
-            <br>
-            <br>
-          <button  type="submit" class="UBDATE" onclick="myFunction()">UBDATE</button>
-
-
+      <div style="text-align: center; "  id="fields">
+        
+        <script>
+          viewStudent();
+        </script>
     </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section-about">
+          <h3>About us</h3>
+          <h4>Location:</h4>
+          <p><a class="footerLink" href="https://www.google.com/maps/place/Faculty+of+Computers+and+Artificial+Intelligence+-+Cairo+University/@30.0313294,31.2085304,810m/data=!3m2!1e3!4b1!4m6!3m5!1s0x145846d0b807627d:0xb2a6ce4702edc3da!8m2!3d30.0313294!4d31.2107191!16s%2Fg%2F1yw0_wjgc">
+            Faculty Of Computers and Artificial Intelligence - Cairo University</a></p><br>
+          <h4>Working Days:</h4>
+          <p>From Sunday to Monday - 9AM to 2PM</p>
+        </div>
+        <div class="footer-section-contact">
+          <h3>Contact Us:</h3>
+          You can contact us on our<a class="footerLink" href="mailto:nooreyadd39@gmail.com">email</a><br>
+          For any complaints about the website contact our developers:
+          <a class="footerLink" href="mailto:nourmuhammad835@gmail.com">Nour Mohamed</a>
+          <a class="footerLink" href="mailto:mernaislam39@gmail.com">Merna Islam</a>
+          <a class="footerLink" href="mailto:ranaessam03@gmail.com">Rana Essam</a>
+          <a class="footerLink" href="mailto:nooreyadd39@gmail.com">Noor Eyad</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; academic-students-affairs.com | Designed by a team of professional designers
+      </div>
+    </footer>
 </body>
+
 </html>
