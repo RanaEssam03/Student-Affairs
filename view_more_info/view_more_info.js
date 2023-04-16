@@ -31,7 +31,7 @@ function view_student(){
     document.getElementById('firstName').innerHTML = student.first_name;
     document.getElementById('lastName').innerHTML = student.last_name;
     document.getElementById('gpa').innerHTML = student.gpa;
-    //document.getElementById('gender').innerHTML = student.gender;
+    document.getElementById('gender').innerHTML = student.gender;
     document.getElementById('email').innerHTML = student.email;
     document.getElementById('department').innerHTML = student.department;
     document.getElementById('phone').innerHTML = student.phone;

@@ -21,8 +21,8 @@ function pushData(students){
           "<td>" + students[i].department + "</td>" +
           "<td>" + students[i].gpa + "</td>" +
           "<td>\n" +
-          "<label  for=\"options\"></label>\n" +
-          " <select class=\"dropdown\" name=\"options\" id=\"options\"" + students[i].id + ">\n" +
+          "<label for=\"options\"></label>\n" +
+          " <select class=\"dropdown\"  name=\"options\" id=\"options\"" + students[i].id + ">\n" +
           "<option>Active</option>\n" +
           "<option>Inactive</option>\n" +
           "</select>\n" +

@@ -12,6 +12,15 @@ function getStudent(){
     return student;
 }
 
+
+function confirmDeletion(){
+    const reponse = confirm("Are you sure you want to delete this student?");
+    if (reponse == true){
+        deleteStudent();
+    }
+    
+}
+
 function updateStudent(){
     let Id = localStorage.getItem("id");
 
@@ -71,7 +80,7 @@ function viewStudent(){
          "<br>"+
          "<br>"+
        " <label for=\"email\">Email:</label>"+
-       " <input  type=\"email\" name=\"email\" id=\"email\" value="+student.email+"  pattern=\"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$\" >"+
+       " <input  type=\"email\" name=\"email\" id=\"email\" value="+student.email+"  >"+
        " <br>"+
        " <br>"+
       "  <label for=\"phone\">Phone:</label>"+
@@ -83,7 +92,7 @@ function viewStudent(){
         "<br>"+
         "<br>"+
      " <button  class=\"UBDATE\" onclick=\"updateStudent()\">UBDATE</button>"+
-     " <button  class=\"delete\" onclick=\"deleteStudent()\">DELETE</button>"
+     " <button  class=\"delete\" onclick=\"confirmDeletion()\">DELETE</button>"
 
     );
 }
