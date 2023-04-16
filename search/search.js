@@ -7,7 +7,7 @@ function getData() {
 
 
 function getVal() {
-    var val = document.querySelector("input").value;
+    var val = document.querySelector("#search").value;
     localStorage.setItem("value-to-search-for", val);
     searchData(val);
 }

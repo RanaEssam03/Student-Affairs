@@ -13,7 +13,7 @@ function addStudent() {
   let students = getData();
 
   if (cnt == null) {
-    cnt = students.length();
+    cnt = students.length;
   }
 
 

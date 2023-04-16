@@ -38,10 +38,13 @@ function writeData() {
     for (i = 0; i < allStudents.length; i++) {
         if (allStudents[i].id == currentID) {
             if (allStudents[i].level == "3") {
-                // students[i].department = val;
-                allStudents[i].department = val;
-                alert("Assigned successfully");
-                break;
+                if (allStudents[i].state == true) {
+                    allStudents[i].department = val;
+                    alert("Assigned successfully");
+                    break;
+                } else {
+                    alert("cannot assign department, student state must be active");
+                }
             } else {
                 alert("cannot assign department, level must be = 3");
             }
