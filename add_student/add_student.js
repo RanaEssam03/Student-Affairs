@@ -8,7 +8,7 @@ function addStudent(){
   let lName = document.getElementById("last_name").value;
   let Email = document.getElementById("email").value;
   let BirthDate = document.getElementById("birthdate").value;
-let Level = document.getElementById("level").value;
+  let Level = document.getElementById("level").value;
 
   let students = getData();
 
@@ -27,6 +27,7 @@ let Level = document.getElementById("level").value;
     phone: phoneNum,
     level: Level,
     department:"General",
+    state: false,
   }
   cnt++;
   localStorage.setItem("cnt", cnt);
