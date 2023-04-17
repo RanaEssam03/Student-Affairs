@@ -77,9 +77,7 @@ li {
 }
 
 .link:hover {
-    box-shadow: inset 100px 0 0 0 #cbcbc8;
-    border-radius: 5px 5px 0px 0px;
-    color: #1c2d2b;
+    color: #946714;
 }
 
 .linkchecked {
@@ -293,8 +291,11 @@ button {
     }
 
     .linkchecked:hover {
-        box-shadow: inset 100px 0 0 0 #cbcbc8;
-        border-radius: 5px;
-        color: #1c2d2b;
+        color: #946714;
     }
 }
+
+.footerLink:hover {
+    color: #946714;
+  }
+  

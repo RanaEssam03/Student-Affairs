@@ -83,7 +83,10 @@ table{
   
   }
 
-
+  .link:hover {
+    color: #946714;
+  }
+  
   .footer{
     margin-top: 150px;
     width: 100%;
@@ -147,3 +150,6 @@ table{
     padding: 20px;
   }
   
+  .footerLink:hover {
+    color: #946714;
+  }

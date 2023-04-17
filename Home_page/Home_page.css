@@ -37,6 +37,10 @@ img {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.link:hover {
+  color: #946714;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -122,6 +126,10 @@ li{
   position: absolute;
 
 
+}
+
+.footerLink:hover {
+  color: #946714;
 }
 
 .footer div{

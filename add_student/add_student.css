@@ -116,6 +116,9 @@ img {
   font-size: 14pt;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.link:hover {
+  color: #946714;
+}
 
 .Gender{
   width: 50px;
@@ -133,9 +136,9 @@ img {
   position: fixed;
   top: 0;
   /* box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); */
-
-
 }
+
+
 
 /*STYLING FOR THE FOOTER*/
 
@@ -197,6 +200,10 @@ img {
   color: #acb4b0;
   margin-bottom: 5px;
 }
+.footerLink:hover {
+  color: #946714;
+}
+
 
 
 

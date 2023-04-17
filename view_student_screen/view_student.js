@@ -10,41 +10,51 @@ function pushData(students){
     return students;
   }
 
-  function changeState(id){
+  function changeState(Id){
       let students = getData();
       let index;
       for (let i = 0; i < students.length; i++){
-          if (students[i].id == id){
+          if (students[i].id == Id){
               index = i;
               break;
           }
       }
-      d = document.getElementById(id).value;
+      d = document.getElementById(Id).value;
       students[index].state = d;
       pushData(students);
   }
+
 
   function viewStudents(){
     let students = getData();
     let tbody = document.getElementById("table");
     for (let i = 0; i < students.length; i++){
+      var setState;
+      if(students[i].state == "true"){
+          setState =  "<option value=\"false\" >Inactive</option >\n" +
+          "<option value=\"true\" selected >Active</option>\n" ;
+      }
+      else {
+          setState =  "<option value=\"false\" selected >Inactive</option >\n" +
+          "<option value=\"true\" >Active</option>\n" ;
+      }
       document.write(
-          "<tr></tr><td><strong>" + students[i].id + "</strong></td>" +
+          "<tr><td><strong>" + students[i].id + "</strong></td>" +
           "<td>" + students[i].first_name + students[i].last_name + "</td>" +
           "<td>" + students[i].level + "</td>" +
           "<td>" + students[i].department + "</td>" +
           "<td>" + students[i].gpa + "</td>" +
           "<td>\n" +
           "<label for=\"options\"></label>\n" +
-          " <select class=\"dropdown\"  name=\"options\" onchange=\"changeState(students[i].id)\" id=" + students[i].id + ">\n" +
-          "<option value=\"false\">Inactive</option>\n" +
-          "<option value=\"true\" >Active</option>\n" +
+          " <select class=\"dropdown\"  name=\"options\" onchange=\"changeState("+students[i].id+")\" id=" + students[i].id + " value = "+students[i].state+">\n" +
+          setState +
           "</select>\n" +
           "</td>" +
           "<td><a class=\"button\" href=\"../update_info/update_info_screen.html\" onclick= setId("+students[i].id+")><button type=\"button\"  >Edit</button></a></td>\n" +
           "<td><a class=\"button\" href=\"../view_more_info/view_more_info.html\" onclick= setId("+students[i].id+")><button type=\"button\">View Info</button></a></td>\n"
           + "</tr>"
       )
+      // getElementById(students[i].id).value = students[i].state;
     }
   }
 

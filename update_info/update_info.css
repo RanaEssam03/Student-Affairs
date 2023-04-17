@@ -49,7 +49,9 @@ button{
 
 }
 button:hover{
-  background-color: #385955;
+  background-color: #cbcbc8;
+  color: #1c2d2b;
+  border: 1px solid #1c2d2b;
 
 }
 
@@ -77,7 +79,8 @@ label{
   color: white;
   width: 210px;
   margin-left: 100px;
-  border-color: white;
+  border-color:#cbcbc8;
+
   box-shadow: inset;
   /* margin-bottom: 200px ; */
   font-family: serif;
@@ -124,6 +127,14 @@ body{
   font-size: 14pt;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.link:hover {
+  color: #946714;
+}
+
+.footerLink:hover {
+  color: #946714;
+}
+
 
 .Gender{
   width: 50px;
@@ -135,7 +146,7 @@ body{
 }
 
 .delete:hover{
-  background-color: red;
+  background-color: rgb(147, 28, 28);
   color: white;
  
 }

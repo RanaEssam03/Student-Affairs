@@ -38,7 +38,7 @@ function writeData() {
     for (i = 0; i < allStudents.length; i++) {
         if (allStudents[i].id == currentID) {
             if (allStudents[i].level == "3") {
-                if (allStudents[i].state == true) {
+                if (allStudents[i].state == "true") {
                     allStudents[i].department = val;
                     alert("Assigned successfully");
                     break;

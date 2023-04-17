@@ -38,7 +38,6 @@ table, th, td{
 
 table{
     width: 100%;
-
 }
 
 thead, th{
@@ -105,68 +104,37 @@ main.table{
 }
 
 /*STYLING FOR THE NAVIGATION BAR*/
+
 img {
-    min-width: 103px;
-    min-height: 52px;
-}
-
-ul {
-    display: inline-block;
-    right: 0;
-}
-
-li {
-    list-style: none;
-    display: inline-block;
-}
-
-#menuList {
-    float: right;
-}
-
-#logo {
     width: 10%;
     height: auto;
     padding-left: 20px;
 }
 
-#navBar {
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Exo 2', sans-serif;
+    /*padding: 1em;*/
+    z-index: 999;
+    /*position: fixed;*/
     background-color: #1c2d2b;
-    padding: 0 1rem;
+    padding: 17px;
+    /*width: 100%;*/
 }
 
 .link {
     color: #cbcbc8;
     float: right;
-    margin-top: 0;
-    margin-right: 3rem;
+    height: 7%;
+    margin-top: 0.8%;
+    margin-right: 50px;
     text-decoration: none;
     font-size: 14pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: inset 0 0 0 0 #cbcbc8;
-    padding: 1.2rem .5rem;
-    border-radius: 5px;
 }
-
-.link:hover {
-    box-shadow: inset 100px 0 0 0 #cbcbc8;
-    border-radius: 5px 5px 0px 0px;
-    color: #1c2d2b;
-}
-
-.linkchecked {
-    display: none;
-}
-
-label div {
-    display: none;
-}
-
-#menu_checkbox {
-    float: right;
-    display: none;
-}
-
 
 /*STYLING FOR THE FOOTER*/
 
@@ -231,9 +199,6 @@ footer .footer-bottom{
     left: 0;
     padding: 20px;
 }
-.footerLink:hover {
-    color: #946714;
-}
 
 @media only screen and (max-width: 767px) {
     footer{
@@ -254,8 +219,9 @@ footer .footer-bottom{
 /*STYLING THE BUTTONS*/
 
 button{
-    color: #cbcbc8;
+    color: #1c2d2b;
     padding: 5px;
+    background-color: #cbcbc8;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -267,23 +233,20 @@ button{
     width: 50%;
     margin-bottom: 0;
     border: 1px solid #adada2;
-    background-color: #1c2d2b;
-
 }
 
 button:hover{
-    background-color: #cbcbc8;
-    color: #1c2d2b;
+    background-color: #1c2d2b;
     cursor: pointer;
-
+    color: #cbcbc8;
 }
 
 /*STYLING THE DROPDOWN LIST*/
 
 .dropdown {
     padding: 5px;
-    background-color: #1c2d2b;
-    color: #cbcbc8;
+    color: #1c2d2b;
+    background-color: #cbcbc8;
     border: 1px solid #adada2;
     cursor: pointer;
     border-radius: 4px;
@@ -291,114 +254,17 @@ button:hover{
 }
 
 .dropdown:hover{
-    color: #1c2d2b;
-    background-color: #cbcbc8;
+    background-color: #1c2d2b;
     cursor: pointer;
-   
+    color: #cbcbc8;
 }
 
+.footerLink:hover {
+    color: #946714;
+  }
 
-
-@media only screen and (max-width: 767px) {
-    footer {
-        background-color: #1c2d2b;
-        color: #bebeb8;
-        font-size: .8em;
-        width: 100%;
-    }
-
-    #bodyimg {
-        padding: 10px 0px;
-        margin-left: 35%;
-        margin-top: 100px;
-        width: 250px;
-        height: 90px;
-    }
-
-    img {
-        min-width: 103px;
-        min-height: 52px;
-    }
-
-    .link {
-        font-size: .8em;
-        display: none;
-    }
-
-    #logo {
-        width: 18%;
-        height: 18%;
-    }
-
-    label div {
-        display: block;
-    }
-
-    label {
-        display: inline-block;
-        margin-right: 2px;
-        margin-left: 70%;
-        margin-top: 5%;
-        transform: translateY(-50%);
-        transition: 0.3s ease transform;
-        cursor: pointer;
-    }
-
-    label div {
-        width: 6px;
-        height: 6px;
-        background-color: #bdbdb9;
-        margin-left: 0;
-        margin-bottom: 6px;
-        border-radius: 4px;
-        transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom,
-            0.3s ease background-color;
-    }
-
-    label div:first-child {
-        width: 22px;
-    }
-
-    label div:nth-child(2) {
-        width: 15px;
-    }
-
-    label div:last-child {
-        width: 30px;
-        margin-bottom: 0;
-    }
-
-    #menu_checkbox:checked+label {
-        transform: translateY(-50%) rotateZ(-90deg);
-    }
-
-    #menu_checkbox:checked+label div {
-        width: 6px;
-        margin-bottom: 3px;
-        background-color: #946714;
-    }
-
-    .linkchecked {
-        color: #cbcbc8;
-        content: "";
-        margin-top: 0;
-        margin-right: 1000px;
-        text-decoration: none;
-        font-size: 14pt;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        box-shadow: inset 0 0 0 0 #cbcbc8;
-        padding: 1rem .5rem;
-        border-radius: 5px;
-        display: block;
-    }
-
-    #menuAdded {
-        background-color: #1c2d2b;
-    }
-
-    .linkchecked:hover {
-        box-shadow: inset 100px 0 0 0 #cbcbc8;
-        border-radius: 5px;
-        color: #1c2d2b;
-    }
-}
+  .link:hover {
+    color: #946714;
+  }
+  
+  
