@@ -30,15 +30,46 @@ function updateStudent(){
     let phoneNum = document.getElementById("phone").value;
     let Level = document.getElementById("level").value;
     let GPA = document.getElementById("gpa").value;
-
+    if(!fName){
+        alert("Invalid first name");
+        return
+    }
+    if(!lName){
+        alert("Invalid last name");
+        return;
+    }
+    if(!Email){
+        alert("Invalid email");
+        return;
+    }
+    if(!phoneNum){
+        alert("Invalid phone number");
+        return;
+    }
+    if(!Level){
+        alert("Invalid level");
+        return;
+    }
+    if(!GPA){
+        alert("Invalid GPA");
+        return;
+    }
+    
+    // if(!(fName & lName & Email & phoneNum & Level & GPA & Level )){
+    //     alert("Please fill all the fields correctly");
+    //     return;
+    // }
     let students = getData();
     let index;
+
+
     for (let i = 0; i < students.length; i++){
         if (students[i].id == Id){
             index = i;
             break;
         }
     }
+   
     students[index].first_name = fName;
     students[index].last_name = lName;
     students[index].email = Email;
@@ -54,47 +85,15 @@ function updateStudent(){
 
 function viewStudent(){
     let student = getStudent();
-    document.write(
-       "<label for=\"first_name\">First Name:</label>"+
-        "<input  type=\"text\" name=\"first_name\" id=\"first_name\" value="+ student.first_name+">"+
-        "<br>"+
-       "<br>"+
-       "<label for=\"last_name\">Last Name:</label>"+
-        "<input  type=\"text\" name=\"last_name\" id=\"last_name\" value="+student.last_name+">"+
-       " <br>"+
-       " <br>"+
-       " <label for=\"id\">ID:</label>"+
-       " <input  type=\"text\" name=\"id\" id=\"id\" value="+student.id+"  disabled>"+
-         " <br>"+
-         " <br>"+
-         "<label for=\"level\">Level:</label>"+
-         "<input  type=\"text\" name=\"level\" id=\"level\" value="+student.level+" pattern=\"[1-4]{1}\">"+
-         "<br>"+
-         "<br>"+
-         "<label for=\"gpa\">GPA:</label>"+
-         "<input  type=\"text\" name=\"gpa\" id=\"gpa\" value="+student.gpa+">"+
-         "<br>"+
-         "<br>"+
-         "<label for=\"department\">Department:</label >"+
-         "<input  type=\"text\" name=\"department\" id=\"department\" value="+student.department+" disabled>"+
-         "<br>"+
-         "<br>"+
-       " <label for=\"email\">Email:</label>"+
-       " <input  type=\"email\" name=\"email\" id=\"email\" value="+student.email+"  >"+
-       " <br>"+
-       " <br>"+
-      "  <label for=\"phone\">Phone:</label>"+
-        "<input   name=\"phone\" id=\"phone\" value="+student.phone+"  pattern=\"[0-9]{11}\">"+
-        "<br>"+
-        "<br>"+
-        "<label for=\"birthdate\"> Birthdate:</label>"+
-        "<input  type=\"date\" name=\"birthdate\" id=\"birthdate\" value="+student.birthdate+">"+
-        "<br>"+
-        "<br>"+
-     " <button  class=\"UBDATE\" onclick=\"updateStudent()\">UBDATE</button>"+
-     " <button  class=\"delete\" onclick=\"confirmDeletion()\">DELETE</button>"
-
-    );
+    document.getElementsByName("first_name")[0].value = student.first_name;
+    document.getElementsByName("last_name")[0].value = student.last_name;
+    document.getElementsByName("email")[0].value = student.email;
+    document.getElementsByName("phone")[0].value = student.phone;
+    document.getElementsByName("level")[0].value = student.level;
+    document.getElementsByName("gpa")[0].value = student.gpa;
+    document.getElementsByName("department")[0].value = student.department;
+    document.getElementsByName("birthdate")[0].value = student.birthdate;
+    document.getElementsByName("id")[0].value = student.id;
 }
 
 function deleteStudent(){

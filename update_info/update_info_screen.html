@@ -25,8 +25,45 @@
     <h1 style="margin-left: 6%;">
         Update Student's Info
     </h1>
-      <div style="text-align: center; "  id="fields">
-        
+      <div style="text-align: center; " id="fields">
+       <label for="first_name">First Name:</label>
+       <input  type="text" name="first_name" id="first_name" required>
+       <br>
+      <br>
+      <label for="last_name">Last Name:</label>
+       <input  type="text" name="last_name" id="last_name"required >
+       <br>
+       <br>
+       <label for="id">ID:</label>
+       <input  type="text" name="id" id="id"  disabled>
+         <br>
+         <br>
+        <label for="level">Level:</label>
+        <input  type="text" name="level" id="level"  pattern="[1-4]{1}" required>
+        <br>
+        <br>
+        <label for="gpa">GPA:</label>
+        <input  type="text" name="gpa" id="gpa" required>
+        <br>
+        <br>
+        <label for="department">Department:</label >
+        <input  type="text" name="department" id="department" disabled>
+        <br>
+        <br>
+       <label for="email">Email:</label>
+       <input  type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required >
+       <br>
+       <br>
+       <label for="phone">Phone:</label>
+       <input   name="phone" id="phone"  pattern="[0-9]{11}" required>
+       <br>
+       <br>
+       <label for="birthdate"> Birthdate:</label>
+       <input  type="date" name="birthdate" id="birthdate">
+       <br>
+       <br>
+     <button  class="UBDATE" onclick="updateStudent()">UBDATE</button>
+     <button  class="delete" onclick="confirmDeletion()">DELETE</button>
         <script>
           viewStudent();
         </script>
