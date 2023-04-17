@@ -64,16 +64,16 @@ function getStudent(id) {
     localStorage.setItem("currentStudentId", id);
 }
 
-// For styling menu list
-function displaymenu() {
-    var checkBox = document.getElementById("menu_checkbox");
-    // Get the output text
-    var text = document.getElementById("menuAdded");
+// // For styling menu list
+// function displaymenu() {
+//     var checkBox = document.getElementById("menu_checkbox");
+//     // Get the output text
+//     var text = document.getElementById("menuAdded");
 
-    // If the checkbox is checked, display the output text
-    if (checkBox.checked == true) {
-        text.style.display = "block";
-    } else {
-        text.style.display = "none";
-    }
-}
+//     // If the checkbox is checked, display the output text
+//     if (checkBox.checked == true) {
+//         text.style.display = "block";
+//     } else {
+//         text.style.display = "none";
+//     }
+// }
