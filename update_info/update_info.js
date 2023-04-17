@@ -30,7 +30,10 @@ function updateStudent(){
     let phoneNum = document.getElementById("phone").value;
     let Level = document.getElementById("level").value;
     let GPA = document.getElementById("gpa").value;
-    if(!fName){
+    const myRe = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
+    const validateEmail = Email.match(myRe);
+    
+    if(fName == " " ){
         alert("Invalid first name");
         return
     }
@@ -38,11 +41,11 @@ function updateStudent(){
         alert("Invalid last name");
         return;
     }
-    if(!Email){
+    if(!Email || !validateEmail ){
         alert("Invalid email");
         return;
     }
-    if(!phoneNum){
+    if(!phoneNum || phoneNum.length != 11 ){
         alert("Invalid phone number");
         return;
     }
@@ -50,10 +53,12 @@ function updateStudent(){
         alert("Invalid level");
         return;
     }
-    if(!GPA || GPA >4 || GPA < 0){
+    if( GPA >4 || GPA <= 0){
         alert("Invalid GPA");
         return;
     }
+
+
     
     // if(!(fName & lName & Email & phoneNum & Level & GPA & Level )){
     //     alert("Please fill all the fields correctly");

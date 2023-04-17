@@ -49,20 +49,20 @@
       <br>
       <label for="email">Email: </label>
       <input type="text" name="email" id="email" placeholder="student's email..."
-        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required title= "Invalid email ! ">
       <br>
       <br>
       <label for="phone">Phone: </label>
-      <input type="tel" name="phone" id="phone" placeholder="01..." pattern="[0-9]{11}" required>
+      <input type="tel" name="phone" id="phone" placeholder="01..." pattern="[0-9]{11}" required title= "Invalid phone number ! ">
       <br>
       <br>
       <label for="gpa">GPA: </label>
-      <input type="text" name="gpa" id="gpa" placeholder="student's gpa..." required>
+      <input type="text" name="gpa" id="gpa" placeholder="student's gpa..." required  pattern="[0-4]+([\.][0-9]{0,2})?" required title= "Invalid GPA ! ">
       <!--pattern="[0-4]{1}+[?.]+[0-9]{2}"-->
       <br>
       <br>
       <label for="level">Level: </label>
-      <input type="text" name="level" id="level" placeholder="1->4" pattern="[1-4]{1}" required>
+      <input type="text" name="level" id="level" placeholder="1->4" pattern="[1-4]{1}" required title= "Invalid level ! "> 
       <!--pattern="[0-4]{1}+[?.]+[0-9]{2}"-->
       <br>
       <br>

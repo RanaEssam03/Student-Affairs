@@ -1,4 +1,7 @@
 
+
+
+
 function addStudent(e) {
   let cnt = localStorage.getItem("cnt");
 
@@ -23,6 +26,17 @@ function addStudent(e) {
     return;
   }
 
+  if(phoneNum.length != 11){
+    alert("Invalid phone number");
+    e.preventDefault();
+    return;
+  }
+
+  if(Level > 4 || Level < 0){
+    alert("Invalid level");
+    e.preventDefault();
+    return;
+  }
 
   let student = {
     id: 20210000 + parseInt(cnt),
