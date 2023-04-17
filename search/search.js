@@ -4,8 +4,6 @@ function getData() {
     return students;
 }
 
-
-
 function getVal() {
     var val = document.querySelector("#search").value;
     localStorage.setItem("value-to-search-for", val);
@@ -35,15 +33,15 @@ function pushResultData(studentResult) {
 }
 
 // For styling menu list
-function displaymenu() {
-    var checkBox = document.getElementById("menu_checkbox");
-    // Get the output text
-    var text = document.getElementById("menuAdded");
+// function displaymenu() {
+//     var checkBox = document.getElementById("menu_checkbox");
+//     // Get the output text
+//     var text = document.getElementById("menuAdded");
 
-    // If the checkbox is checked, display the output text
-    if (checkBox.checked == true) {
-        text.style.display = "block";
-    } else {
-        text.style.display = "none";
-    }
-}
+//     // If the checkbox is checked, display the output text
+//     if (checkBox.checked == true) {
+//         text.style.display = "block";
+//     } else {
+//         text.style.display = "none";
+//     }
+// }
