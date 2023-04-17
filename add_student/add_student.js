@@ -1,5 +1,5 @@
 
-function addStudent() {
+function addStudent(e) {
   let cnt = localStorage.getItem("cnt");
 
   let GPA = document.getElementById("gpa").value;
@@ -15,6 +15,12 @@ function addStudent() {
 
   if (cnt == null) {
     cnt = students.length;
+  }
+
+  if(GPA < 0 || GPA> 4){
+    alert("Invalid GPA");
+    e.preventDefault();
+    return;
   }
 
 

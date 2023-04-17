@@ -46,11 +46,11 @@ function updateStudent(){
         alert("Invalid phone number");
         return;
     }
-    if(!Level){
+    if(!Level || Level < 1 || Level >4 ){
         alert("Invalid level");
         return;
     }
-    if(!GPA){
+    if(!GPA || GPA >4 || GPA < 0){
         alert("Invalid GPA");
         return;
     }
