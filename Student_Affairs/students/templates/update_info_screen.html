@@ -1,0 +1,95 @@
+<!--@auhter: Rana Essam 
+    @Date: 3/3/2023
+    @Description: This file is the update info screen for the student management system by the user 
+    but not including update department
+-->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src ="update_info.js" >
+        
+    </script>
+    <link rel="stylesheet" href="{% static 'update_info.css' %}">
+    <title>Update Student</title>
+    <nav id="navBar">
+        <a href="../Home_page/Homa_page.html"><img src="../Images/logo-color2.png" alt="Website logo" style="text-align: start"></a>
+        <a href="../view_student_screen/view_student_screen.html" class="link">View</a>
+        <a href="../search/search.html" class="link">Search</a>
+        <a href="../add_student/add_student_screen.html" class="link">Add</a>
+        <a href="../Home_page/Homa_page.html" class="link">Home</a>
+    </nav>
+    <h1 style="margin-left: 6%;">
+        Update Student's Info
+    </h1>
+      <div style="text-align: center; " id="fields">
+       <label for="first_name">First Name:</label>
+       <input  type="text" name="first_name" id="first_name"  value = {{std.firstname }} required>
+       <br>
+      <br>
+      <label for="last_name">Last Name:</label>
+       <input  type="text" name="last_name" id="last_name" value = {{std.lastname }} required >
+       <br>
+       <br>
+       <label for="id">ID:</label>
+       <input  type="text" name="id" id="id" value= {{std.id}}  disabled>
+         <br>
+         <br>
+        <label for="level">Level:</label>
+        <input  type="text" name="level" id="level" value = {{std.level}}  pattern="[1-4]{1}" required>
+        <br>
+        <br>
+        <label for="gpa">GPA:</label>
+        <input  type="text" name="gpa" id="gpa" value = {{std.gpa}} required>
+        <br>
+        <br>
+        <label for="department">Department:</label >
+        <input  type="text" name="department" id="department" value = {{std.dep}}  disabled>
+        <br>
+        <br>
+       <label for="email">Email:</label>
+       <input  type="email" name="email" id="email" value = {{std.email}} required >
+       <br>
+       <br>
+       <label for="phone">Phone:</label>
+       <input   name="phone" id="phone"  pattern="[0-9]{11}" value = {{std.phone}} required>
+       <br>
+       <br>
+       <label for="birthdate"> Birthdate:</label> 
+       <input  type="text" name="birthdate" id="birthdate" value = {{std.birthdate.year}}-{{std.birthdate.month}}-{{std.birthdate.day}} >
+       <br>
+       <br>
+     <button  class="UBDATE" onclick="updateStudent()">UBDATE</button>
+     <button  class="delete" onclick="confirmDeletion()">DELETE</button>
+      
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section-about">
+          <h3>About us</h3>
+          <h4>Location:</h4>
+          <p><a class="footerLink" href="https://www.google.com/maps/place/Faculty+of+Computers+and+Artificial+Intelligence+-+Cairo+University/@30.0313294,31.2085304,810m/data=!3m2!1e3!4b1!4m6!3m5!1s0x145846d0b807627d:0xb2a6ce4702edc3da!8m2!3d30.0313294!4d31.2107191!16s%2Fg%2F1yw0_wjgc">
+            Faculty Of Computers and Artificial Intelligence - Cairo University</a></p><br>
+          <h4>Working Days:</h4>
+          <p>From Sunday to Monday - 9AM to 2PM</p>
+        </div>
+        <div class="footer-section-contact">
+          <h3>Contact Us:</h3>
+          You can contact us on our<a class="footerLink" href="mailto:nooreyadd39@gmail.com">email</a><br>
+          For any complaints about the website contact our developers:
+          <a class="footerLink" href="mailto:nourmuhammad835@gmail.com">Nour Mohamed</a>
+          <a class="footerLink" href="mailto:mernaislam39@gmail.com">Merna Islam</a>
+          <a class="footerLink" href="mailto:ranaessam03@gmail.com">Rana Essam</a>
+          <a class="footerLink" href="mailto:nooreyadd39@gmail.com">Noor Eyad</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; academic-students-affairs.com | Designed by a team of professional designers
+      </div>
+    </footer>
+</body>
+
+</html>
