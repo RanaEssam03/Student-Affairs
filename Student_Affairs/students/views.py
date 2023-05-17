@@ -30,5 +30,10 @@ def editStudent(request, id):
 def main(request):
   template = loader.get_template('main_screen.html')
   return HttpResponse(template.render())
+
+
+def home(request):
+  template = loader.get_template('Home_page.html')
+  return HttpResponse(template.render())
   
 

@@ -20,22 +20,22 @@
                <div class="column">
                 <h4><i>Project 1</i></h4>
                 
-               <a href=""><img id ="first" src="{% static 'main_screen.css' %}"alt=""></a>
+              {% load static%} <a href=""><img id ="first" src="{% static "Images/HR.jpg" %}"alt=""></a>
                <a  href="">Human Resources </a>
                </div>
                <div class="column">
                 <h4><i>Project 2</i></h4>
-                  <a href="../Home_page/Homa_page.html"><img src="../Images/Back_to_school.jpg" alt=""></a>
+                  <a href="../Home_page/Homa_page.html"><img src="{% static "Images/Back_to_school.jpg" %}" alt=""></a>
                   <a href="../Home_page/Homa_page.html">Student Affairs </a>
                </div>
                <div class="column">
                 <h4><i>Project 3</i></h4>
-                  <a href=""><img src="../Images/higher_studies.jpg" alt=""></a>
+                  <a href=""><img src="{% static "Images/higher_studies.jpg" %}" alt=""></a>
                   <a href="">Higher Studies </a>
                </div>
                <div class="column">
                 <h4><i>Project 4</i></h4>
-                <a href=""><img src="../Images/computer_lab.jpg" alt=""></a>
+                <a href=""><img src="{% static "Images/computer_lab.jpg" %}" alt=""></a>
                 <a href="">Laboratory Tracking </a>
              </div>
             </div>
