@@ -1,29 +1,37 @@
-<!-- @author: Nour Muhammad
-    @Date: 4/3/2023
-    @Description: This is the home page for the student affairs website
--->
+{% extends "master.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <title> ASA - Home Page</title>
-  <meta charset = "UTF-8">
-  <meta http-equiv="X-UA-Compatible" content = "IE = edge">
-  <meta name = "viewport" conetnt = "width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'Home_page.css' %}">
 
-</head>
+{% block title%}
+ASA - Home Page
+{%endblock%}
+{% block stylesheet%}
+<link rel="stylesheet" href="{% static 'Home_page.css'%}">
+{%endblock%}
 
-<body>
-  <nav id="navBar">
-    <a href="../Home_page/Homa_page.html"><img src="../Images/logo-color2.png" alt="Website logo" style="text-align: start"></a>
-    <a href="../view_student_screen/view_student_screen.html" class="link">View</a>
-    <a href="../search/search.html" class="link">Search</a>
-    <a href="../add_student/add_student_screen.html" class="link">Add</a>
-    <a href="../Home_page/Homa_page.html" class="link">Home</a>
-    </nav>
-<div class = "container"></div>
+{%block img%}
+href = "#"
+{%endblock%}
+
+{%block view%}
+href = "allstudents/"
+{%endblock%}
+
+{%block Search%}
+{%endblock%}
+
+{%block add%}
+{%endblock%}
+
+{%block home%}
+href = "#"
+{%endblock%}
+
+
+
+
+{% block content%}
     <div class = "text">
     <h1>Welcome, ASA Community</h1>
     <p class = "content-top">Hope you're having a good day full of potential for work.</p>
@@ -48,30 +56,4 @@
         
   </ol>
 </div>
-<div class="footer">
-  <div class="footer-content">
-    <div class="footer-section-about">
-      <h3>About us</h3>
-      <h3>Location:</h3>
-      <p><a class="footerLink" href="https://www.google.com/maps/place/Faculty+of+Computers+and+Artificial+Intelligence+-+Cairo+University/@30.0313294,31.2085304,810m/data=!3m2!1e3!4b1!4m6!3m5!1s0x145846d0b807627d:0xb2a6ce4702edc3da!8m2!3d30.0313294!4d31.2107191!16s%2Fg%2F1yw0_wjgc">
-        Faculty Of Computers and Artificial Intelligence - Cairo University</a></p>
-      <h4>Working Days:</h4>
-      <p>From Sunday to Monday - 9AM to 2PM</p>
-    </div>
-    <div class="footer-section-contact">
-      <h3>Contact Us:</h3>
-        You can contact us on our<a class="footerLink" href="mailto:nooreyadd39@gmail.com">email</a><br>
-        For any complaints about the website contact our developers:
-        <a class="footerLink" href="mailto:nourmuhammad835@gmail.com">Nour Mohamed</a>
-        <a class="footerLink" href="mailto:mernaislam39@gmail.com">Merna Islam</a>
-        <a class="footerLink" href="mailto:ranaessam03@gmail.com">Rana Essam</a>
-        <a class="footerLink" href="mailto:nooreyadd39@gmail.com">Noor Eyad</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; academic-students-affairs.com | Designed by a team of professional designers
-  </div>
-</div>
-</body>
-
-</html>
+{%endblock%}

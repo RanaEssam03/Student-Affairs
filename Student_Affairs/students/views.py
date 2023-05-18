@@ -35,5 +35,10 @@ def main(request):
 def home(request):
   template = loader.get_template('Home_page.html')
   return HttpResponse(template.render())
+
+def searchResults(request):
+  template = loader.get_template('searchResults.html')
+  return HttpResponse(template.render())
+  
   
 
