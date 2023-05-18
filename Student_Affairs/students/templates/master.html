@@ -7,6 +7,8 @@
   <meta charset = "UTF-8">
   <meta http-equiv="X-UA-Compatible" content = "IE = edge">
   <meta name = "viewport" conetnt = "width=device-width, initial-scale=1.0">
+ {%load static%} <link rel="icon" href= "{% static "Images/logo-color-tab.png" %}">
+
   {% block stylesheet %}  {% endblock %}
 
 
@@ -15,19 +17,13 @@
 <body>
   <nav id="navBar">
 
-    <a  {%block img%}{%endblock%} > {% load static%}<img src="{% static "Images/logo-color2.png" %}" alt="Website logo" style="text-align: start"></a>
-    <a  {%block view%} {%endblock%} class="link">View</a>
-    <a {%block Search%} {%endblock%} class="link">Search</a>
-    <a {%block add%} {%endblock%}class="link">Add</a>
-    <a {%block home%} {%endblock%} class="link">Home</a>
+    <a  href = "../home/" > {% load static%}<img src="{% static "Images/logo-color2.png" %}" alt="Website logo" style="text-align: start"></a>
+    <a  href = "../allstudents/" class="link">View</a>
+    <a href = "../search/"class="link">Search</a>
+    <a href = "../add/"class="link">Add</a>
+    <a href = "../home/"class="link">Home</a>
       </nav>
-<div class = "container"></div>
-    <div class = "text">
-    <h1>Welcome, ASA Community</h1>
-    <p class = "content-top">Hope you're having a good day full of potential for work.</p>
-    <p class = "content">Please, don't forget to check today's announcements.</p>
-    <b><a id="button-link" href="#ann"> View Announcements</a></b>
-</div>
+
 {% block content %}
 
 {% endblock %}

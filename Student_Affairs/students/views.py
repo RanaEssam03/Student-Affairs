@@ -39,6 +39,14 @@ def home(request):
 def searchResults(request):
   template = loader.get_template('searchResults.html')
   return HttpResponse(template.render())
+
+def search(request):
+  template = loader.get_template('search.html')
+  return HttpResponse(template.render())
+
+def addStudent(request):
+  template = loader.get_template('add_student_screen.html')
+  return HttpResponse(template.render())
   
   
 

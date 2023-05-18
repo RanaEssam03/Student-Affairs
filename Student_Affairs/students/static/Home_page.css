@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -50,10 +51,11 @@ img {
   box-sizing: border-box;
 }
 
+
 .container {
   width: 100%;
   height: 110vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../Images/HomePage_background.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("Images/HomePage_background.jpg");
   background-size: 100%;
   filter: blur(3px);
 }

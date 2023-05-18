@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+
+{% load static %}
+
+
+{% block title%}
+Search
+{%endblock%}
+{% block stylesheet%}
+<link rel="stylesheet" href="{% static 'search.css'%}">
+{%endblock%}
+
+
+{% block content%}
+    <img src="{% static "Images/logo-search.png" %}" alt="Logo Image" id="bodyimg">
+    <h1>Student Records Search</h1>
+    <div id="formDiv">
+        <!-- ../searchResults/searchResults.html -->
+        <form name="form" action="../searchResults/searchResults.html">
+            <input type="search" name="q" placeholder="Search Student Name.." id="search" pattern="[a-zA-Z ]+"
+                title="Only include letters [A-Z]" required>
+            <button type="submit" onclick="getVal();"></button>
+        </form>
+    </div>
+    {%endblock%}
+   
