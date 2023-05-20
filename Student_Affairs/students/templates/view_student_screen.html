@@ -47,9 +47,12 @@
                       <td>{{std.gpa}}</td>
                       <td>
                           <label for="options"></label>
-                          <select class="dropdown" name="options" id="options">
-                              <option>Active</option>
-                              <option>Inactive</option>
+                       
+                     <select class="dropdown" name="options" id="options"   >
+                    
+                          
+                              <option value ="1" {%if std.state%}selected {%endif%} >Active</option>
+                              <option value = "2"{%if not std.state%}selected {%endif%} >Inactive</option>
                           </select>
                       </td>
 
