@@ -55,6 +55,7 @@ ROOT_URLCONF = 'Student_Affairs.urls'
 
 TEMPLATES = [
     {
+        ##os.path.join(BASE_DIR)
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
