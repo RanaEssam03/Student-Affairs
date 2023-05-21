@@ -13,11 +13,12 @@ Update Student
 {% block stylesheet %}  
 <link rel="stylesheet" href="{% static 'update_info.css' %}">
 {% endblock %}
+<script src="{% static 'js/update_info.js' %}"></script>
  
 {% block content %}  
 <h1 style="margin-left: 6%;"> Update Student's Info </h1>
 <center>
-<form style="text-align: center; " id="fields" method = "GET">
+<form style="text-align: center; " id="fields" method = "GET" onsubmit = "updateStudent()">
   {% csrf_token %}
 
   <label for="first_name">First Name:</label>
@@ -58,7 +59,8 @@ Update Student
   <br>
   <input type = "submit" value= "UBDATE" class="UBDATE" >
   {% comment %} <button  class="UBDATE" onclick="updateStudent()">UBDATE</button> {% endcomment %}
-  <button  class="delete" onclick="confirmDeletion()">DELETE</button>    
+  <button class="delete" onclick="submit()">DELETE</button>   
+  <input type = "hidden" value = "0" id = "hidden"> 
   <label for="options"></label>
                        
   <select class="dropdown" name="state" id="state"   >

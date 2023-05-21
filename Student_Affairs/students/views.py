@@ -45,6 +45,9 @@ def editStudent(request, id):
     'std': mymember, 
   }
   if request.GET.get('first_name')  != None:
+    if(request.GET.get('delete') == "1"):
+      mymember.delete()
+      return redirect(allstudents)
     
     first_name = request.GET.get('first_name')
     last_name = request.GET.get("last_name")
@@ -66,7 +69,7 @@ def editStudent(request, id):
     mymember.gpa = gpa
     
     mymember.save() 
-    # return redirect(allstudents)
+    return redirect(allstudents)
   
   return HttpResponse(template.render(context, request))
 
@@ -96,6 +99,14 @@ def search(request):
 def addStudent(request):
   template = loader.get_template('add_student_screen.html')
   return HttpResponse(template.render())
+
+def delete(request, id):
+  std = Member.objects.get(id= id)
+  std.delete()
+  std.save()
+  print("HERERRRR")
+  return redirect(allstudents)
+  
   
   
 

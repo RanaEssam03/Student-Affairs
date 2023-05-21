@@ -52,7 +52,7 @@
                           <label for="options"></label>
                        <form method = "POST" id ={{std.id}} onsubmit = "login()" >
                         {% csrf_token %}
-                     <select class="dropdown" name="state"  onchange = "submitForm({{std.id}})" >
+                     <select class="dropdown" name="state"  onchange = "this.form.submit()" >
                               <option value ="1"{%if std.state%}selected {%endif%} >Active</option>
                               <option value = "2"{%if not std.state%}selected {%endif%} >Inactive</option>
                           </select>

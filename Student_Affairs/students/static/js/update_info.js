@@ -21,7 +21,7 @@ function confirmDeletion(){
     
 }
 
-function updateStudent(){
+function updateStudent(event){
     let Id = localStorage.getItem("id");
 
     let fName = document.getElementById("first_name").value + " ";
@@ -35,6 +35,7 @@ function updateStudent(){
     
     if(fName == " " ){
         alert("Invalid first name");
+        event.preventDefault()
         return
     }
     if(!lName){
@@ -81,5 +82,11 @@ function deleteStudent(){
     pushData(students);
     alert("Student deleted successfully");
     window.location.href = "../view_student_screen/view_student_screen.html";
+}
+
+function submit(){
+    alert("herrre")
+    document.getElementById("hidden").value = "1"
+    document.getElementById("fields").submit();
 }
 
