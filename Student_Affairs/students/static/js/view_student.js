@@ -71,10 +71,11 @@ function pushData(students){
 
 var form
 function submitForm(id){
+  id2 = id;
+
   form= document.getElementById(id)
   form.submit()
 
-     
 }
 
 function submitFormReturn(event) {
@@ -91,7 +92,26 @@ function submitForm2(event){
 //Calling a function during form submission.
 
 function submitFormAjax(event, id) {
-  var ajxForm = document.getElementById("ajxForm");
+  event.preventDefault()
+  var ajxForm = document.getElementById(id);
+  var data = new FormData(ajxForm);
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "");
+  xhr.send(data);
+  xhr.onload = function() {
+     alert("Submitted");
+  };
+  return false;
+}
+
+var  id2 ;
+
+function login(e){
+
+  e.preventDefault(); //to stop form action i.e. submit
+  var ajxForm = document.getElementById(id2);
+  alert("Submitted");
+
   var data = new FormData(ajxForm);
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "");

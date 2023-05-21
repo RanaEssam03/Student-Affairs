@@ -50,7 +50,7 @@
                       <td>{{std.gpa}}</td>
                       <td>
                           <label for="options"></label>
-                       <form method = "POST" id ={{std.id}} onsubmit = "submitFormReturn();return false;" >
+                       <form method = "POST" id ={{std.id}} onsubmit = "login()" >
                         {% csrf_token %}
                      <select class="dropdown" name="state"  onchange = "submitForm({{std.id}})" >
                               <option value ="1"{%if std.state%}selected {%endif%} >Active</option>
