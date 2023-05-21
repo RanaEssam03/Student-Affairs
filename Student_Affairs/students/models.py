@@ -12,3 +12,15 @@ class Member(models.Model):
     gender = models.CharField(max_length=6)
     dep = models.CharField(max_length= 10,  default='General')
     state = models.BooleanField(default= False)
+    
+    
+
+class state(models.Model):
+    state = models.BooleanField(default= False)
+    stateID = models.IntegerField()
+    
+    def __str__(self):
+        return self.state
+    
+    def __str__(self):
+        return self.id

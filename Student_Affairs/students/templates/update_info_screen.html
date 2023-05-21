@@ -16,7 +16,10 @@ Update Student
  
 {% block content %}  
 <h1 style="margin-left: 6%;"> Update Student's Info </h1>
-<div style="text-align: center; " id="fields">
+<center>
+<form style="text-align: center; " id="fields" method = "GET">
+  {% csrf_token %}
+
   <label for="first_name">First Name:</label>
   <input  type="text" name="first_name" id="first_name"  value = {{std.firstname }} required>
   <br>
@@ -38,7 +41,7 @@ Update Student
   <br>
   <br>
   <label for="department">Department:</label >
-  <input  type="text" name="department" id="department" value = {{std.dep}}  disabled>
+  <input  type="text" name="dep" id="dep" value = {{std.dep}}  disabled>
   <br>
   <br>
   <label for="email">Email:</label>
@@ -50,10 +53,18 @@ Update Student
   <br>
   <br>
   <label for="birthdate"> Birthdate:</label> 
-  <input  type="text" name="birthdate" id="birthdate" value = {{std.birthdate.year}}-{{std.birthdate.month}}-{{std.birthdate.day}} >
+  <input  type="date" name="birthdate" id="birthdate" value = {{std.birthdate|date:"Y-m-d"}} >
   <br>
   <br>
-  <button  class="UBDATE" onclick="updateStudent()">UBDATE</button>
-  <button  class="delete" onclick="confirmDeletion()">DELETE</button>      
-</div>
+  <input type = "submit" value= "UBDATE" class="UBDATE" >
+  {% comment %} <button  class="UBDATE" onclick="updateStudent()">UBDATE</button> {% endcomment %}
+  <button  class="delete" onclick="confirmDeletion()">DELETE</button>    
+  <label for="options"></label>
+                       
+  <select class="dropdown" name="state" id="state"   >
+           <option value ="1" {%if std.state%}selected {%endif%} >Active</option>
+           <option value = "0"{%if not std.state%}selected {%endif%} >Inactive</option>
+       </select>  
+      </from>
+      </center> 
 {% endblock %}

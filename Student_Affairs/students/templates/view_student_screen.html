@@ -6,8 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'view_student_screen.css' %}">
+ {%load static%} <link rel="icon" href= "{% static "Images/logo-color-tab.png" %}">
+ <script src="{% static 'js/view_student.js' %}"></script>
+
+
     <title>View Student Activity Log</title>
-    <script src="view_student.js"></script>
 </head>
 <header>
     <nav id="navBar" class = "header">
@@ -47,13 +50,15 @@
                       <td>{{std.gpa}}</td>
                       <td>
                           <label for="options"></label>
-                       
-                     <select class="dropdown" name="options" id="options"   >
-                    
-                          
-                              <option value ="1" {%if std.state%}selected {%endif%} >Active</option>
+                       <form method = "POST" id ={{std.id}} onsubmit = "submitFormReturn();return false;" >
+                        {% csrf_token %}
+                     <select class="dropdown" name="state"  onchange = "submitForm({{std.id}})" >
+                              <option value ="1"{%if std.state%}selected {%endif%} >Active</option>
                               <option value = "2"{%if not std.state%}selected {%endif%} >Inactive</option>
                           </select>
+                            <input type = "hidden" name = "id" value = {{std.id}}  >
+                        </form>
+             
                       </td>
 
                       <td><a class="button"  href="../editStudent/{{std.id}}"><button type="button">Edit</button></a></td>
