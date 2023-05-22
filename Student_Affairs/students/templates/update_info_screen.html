@@ -13,14 +13,69 @@ Update Student
 {% block stylesheet %}  
 <link rel="stylesheet" href="{% static 'update_info.css' %}">
 {% endblock %}
-<script src="{% static 'js/update_info.js' %}"></script>
- 
+{%block script%}
+<script src="{% static 'js\update_info.js' %}" type="text/javascript"></script>
+ {%endblock%}
 {% block content %}  
 <h1 style="margin-left: 6%;"> Update Student's Info </h1>
 <center>
-<form style="text-align: center; " id="fields" method = "GET" onsubmit = "updateStudent()">
-  {% csrf_token %}
+<form style="text-align: center; " id="fields" method = "GET" onsubmit = "updateStudent(this)">
+    <script>
+        
+function updateStudent(form){
+    alert("herrre22")
 
+    let Id = localStorage.getItem("id");
+    let fName = document.getElementById("first_name").value + " ";
+    let lName = document.getElementById("last_name").value;
+    let Email = document.getElementById("email").value;
+    let phoneNum = document.getElementById("phone").value;
+    let Level = document.getElementById("level").value;
+    let GPA = document.getElementById("gpa").value;
+    const myRe = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
+    const validateEmail = Email.match(myRe);
+    
+    if(fName == " " ){
+        alert("Invalid first name");
+         form.disabled();
+    }
+    if(!lName){
+        alert("Invalid last name");
+        form.disabled();
+
+    }
+    if(!Email || !validateEmail ){
+        alert("Invalid email");
+        form.disabled();
+        return
+    
+    }
+    if(!phoneNum || phoneNum.length != 11 ){
+        ralert("Invalid phone number");
+         form.disabled();
+
+    }
+    if(!Level || Level < 1 || Level >4 ){
+        alert("Invalid level");
+        form.disabled();
+
+    }
+    if( GPA >4 || GPA <= 0){
+        alert("Invalid GPA");
+        event.preventDefault();
+        return
+    }
+    function deleteStd(){
+        alert("herrre")
+        document.getElementById("hidden").value = "1"
+        document.getElementById("fields").submit();
+    }
+    
+
+}
+
+    </script>
+  {% csrf_token %}
   <label for="first_name">First Name:</label>
   <input  type="text" name="first_name" id="first_name"  value = {{std.firstname }} required>
   <br>
@@ -59,8 +114,12 @@ Update Student
   <br>
   <input type = "submit" value= "UBDATE" class="UBDATE" >
   {% comment %} <button  class="UBDATE" onclick="updateStudent()">UBDATE</button> {% endcomment %}
-  <button class="delete" onclick="submit()">DELETE</button>   
-  <input type = "hidden" value = "0" id = "hidden"> 
+  {% csrf_token %}
+
+  <button class="delete" onclick="confirmDeletion()">DELETE</button>   
+
+
+  <input type = "hidden" name = "delete" value = "0" id = "hidden"> 
   <label for="options"></label>
                        
   <select class="dropdown" name="state" id="state"   >
