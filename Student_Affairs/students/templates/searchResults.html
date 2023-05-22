@@ -4,11 +4,10 @@
     {% block stylesheet %} <link rel="stylesheet" href="{% static 'searchResults.css' %}"> {% endblock %}
 
 
-<!-- <body onload="logResults()"> -->
 {% block content %}
     <main id="tableDiv">
         <section id="tableTitle">
-            <h1 id="header1">List of Search Results for: </h1>
+            <h1 id="header1">List of Search Results for: {{ value }} </h1>
         </section>
         <section id="tableBody">
             <table id="mytable">
@@ -18,6 +17,37 @@
                     <th>Level</th>
                     <th>Department</th>
                 </thead>
+                <tbody>
+                    {% if not students%}
+                    <tr>
+                        <td colspan="4" id="notFound">No Matching Names</td>
+                    </tr>
+                    {% endif %}
+                    {% for student in students %}
+                    <tr>
+                        <td>{{student.id}}</td>
+                        <td>{{student.firstname}} {{student.lastname}}</td>
+                        <td>{{student.level}}</td>
+                        <td>
+                            {% if student.level == 3 %}
+                                <form action="../departmentAssignment/{{student.id}}">
+                                    <button type="submit">Assign</button>
+                                </form>
+                            {% else %}
+                                <form action="../departmentAssignment/{{student.id}}" name = "myform">
+                                    <button type="submit" onclick="alerting()">Assign</button>
+                                </form>
+                                <script>
+                                    function alerting(){
+                                        alert("Cannot assign, student level must be equal to 3");
+                                        document.myform.action = "../search";
+                                    }
+                                </script>
+                            {%endif%}    
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
             </table>
         </section>
     </main>

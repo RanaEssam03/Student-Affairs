@@ -14,13 +14,12 @@ Search
 {% block content%}
     <img src="{% static "Images/logo-search.png" %}" alt="Logo Image" id="bodyimg">
     <h1>Student Records Search</h1>
+    {% csrf_token %}
     <div id="formDiv">
-        <!-- ../searchResults/searchResults.html -->
-        <form name="form" action="../searchResults/">
+        <form name="form" action="../searchResults/" method="post">
             <input type="search" name="q" placeholder="Search Student Name.." id="search" pattern="[a-zA-Z ]+"
-                title="Only include letters [A-Z]" required>
-            <button type="submit" onclick="getVal();"></button>
+            title="Only include letters [A-Z]" required>
+            <button type="submit" name="searching"></button>
         </form>
     </div>
-{%endblock%}
-   
+{%endblock%} 
