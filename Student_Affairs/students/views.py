@@ -98,15 +98,28 @@ def search(request):
 
 def addStudent(request):
   template = loader.get_template('add_student_screen.html')
+  if(request.GET.get("first_name") != None):
+    firstName = request.GET.get("first_name")
+    lastName = request.GET.get("last_name")
+    gpa = request.GET.get("gpa")
+    email = request.GET.get("email")
+    phone = request.GET.get("phone")
+    level = request.GET.get("level")
+    birthdate = request.GET.get("birthdate")
+    gender = request.GET.get("gender")
+    state = False
+    std =  Member(firstname= firstName , lastname = lastName, gpa = gpa , email = email, phone = phone , level = level , birthdate = birthdate , gender = gender , dep = "General" , state =False) 
+    std.save()
+    return redirect(addStudent) 
   return HttpResponse(template.render())
 
-def delete(request, id):
-  std = Member.objects.get(id= id)
-  std.delete()
-  std.save()
-  print("HERERRRR")
-  return redirect(allstudents)
-  
+############################################################
+
+
+
+
+
+
   
   
 

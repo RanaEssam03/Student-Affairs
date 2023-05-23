@@ -22,7 +22,8 @@
 
   </h1>
   <center>
-    <form id="form" method = "POST">
+
+    <form id="form" method = "GET"> {% csrf_token %}
       <label for="first_name">First Name: </label>
       <input type="text" name="first_name" id="first_name" placeholder="student's first name..." required>
       <br>
@@ -63,18 +64,9 @@
       <br>
       <br>
       <!-- <input type = "submit" class = "ADD_STUDENT" value="ADD STUDENT"> -->
-      <button type="submit" class="ADD_STUDENT"> ADD STUDENT </button>
-      <script>
-        const form = document.getElementById("form");
-        form.addEventListener("submit", function (e) {
-          // e.preventDefault();
-          console.log("the form has been submited");
-          // let students = [];
-          // pushData(students);
-          addStudent();
-
-        })
-      </script>
+      <input type="submit" class="ADD_STUDENT" value = "ADD STUDENT"> 
+      {% comment %} ADD STUDENT </button> {% endcomment %}
+   
     </form>
 
   </center>
