@@ -7,7 +7,7 @@
   <meta charset = "UTF-8">
   <meta http-equiv="X-UA-Compatible" content = "IE = edge">
   <meta name = "viewport" conetnt = "width=device-width, initial-scale=1.0">
- {%load static%} <link rel="icon" href= "{% static "Images/logo-color-tab.png" %}">
+ {%load static%} <link rel="icon" href= "{% static 'Images/logo-color-tab.png' %}">
 
   {% block stylesheet %}  {% endblock %}
   {%block script%} {%endblock%}
@@ -16,7 +16,7 @@
 <body>
   <nav id="navBar">
 
-    <a  href = "../home/" > {% load static%}<img src="{% static "Images/logo-color2.png" %}" alt="Website logo" style="text-align: start"></a>
+    <a  href = "../home/" > {% load static%}<img src="{% static 'Images/logo-color2.png' %}" alt="Website logo" style="text-align: start"></a>
     <a  href = "../allstudents/" class="link">View</a>
     <a href = "../search/"class="link">Search</a>
     <a href = "../add/"class="link">Add</a>
