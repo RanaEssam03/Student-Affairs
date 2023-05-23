@@ -24,6 +24,11 @@ function pushData(students){
       pushData(students);
   }
 
+  function submitState(){
+
+        
+  }
+
 
 
 
@@ -38,20 +43,85 @@ function pushData(students){
 }
 
 
-// For styling menu list
-function displaymenu() {
-  var checkBox = document.getElementById("menu_checkbox");
-  // Get the output text
-  var text = document.getElementById("menuAdded");
+// // For styling menu list
+// function displaymenu() {
+//   var checkBox = document.getElementById("menu_checkbox");
+//   // Get the output text
+//   var text = document.getElementById("menuAdded");
 
-  // If the checkbox is checked, display the output text
-  if (checkBox.checked == true) {
-      text.style.display = "block";
-  } else {
-      text.style.display = "none";
-  }
+//   // If the checkbox is checked, display the output text
+//   if (checkBox.checked == true) {
+//       text.style.display = "block";
+//   } else {
+//       text.style.display = "none";
+//   }
+// }
+
+
+
+//  function submitState(id, state)  {
+  
+//   // Send the button ID to the Django view function
+//   $.ajax({
+//     url: "/allstudents/",
+//     type: "POST",
+//     data: { button_id: buttonId },
+//   });
+// };
+
+var form
+function submitForm(id){
+  id2 = id;
+
+  form= document.getElementById(id)
+  form.submit()
+
 }
 
-
-
+function submitFormReturn(event) {
+  event.preventDefault()
   
+}
+
+//Get form element
+function submitForm2(event){
+
+   //Preventing page refresh
+   event.preventDefault();
+}
+
+//Calling a function during form submission.
+
+function submitFormAjax(event, id) {
+  alert("Submitted");
+
+  var ajxForm = document.getElementById(id);
+  var data = new FormData(ajxForm);
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "");
+  xhr.send(data);
+  xhr.onload = function() {
+     alert("Submitted");
+  };
+  return false;
+}
+
+var  id2 ;
+
+function setId(id){
+  id2 = id;
+}
+function login(e){
+  e.preventDefault(); //to stop form action i.e. submit
+  var ajxForm = document.getElementById(id2);
+  alert(ajxForm.get("id"));
+
+  // var data = new FormData(ajxForm);
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "");
+  xhr.send(ajxForm);
+  xhr.onload = function() {
+    //  alert("Submitted");
+  };
+  return false;
+}
