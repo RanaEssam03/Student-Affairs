@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import loader
 from .models import Member
+from django.views.decorators.csrf import csrf_exempt
 from django.db import IntegrityError
 from django.shortcuts import render, redirect
 
@@ -86,16 +87,12 @@ def home(request):
   return HttpResponse(template.render())
 #############################################################
 
-def searchResults(request):
-  template = loader.get_template('searchResults.html')
-  return HttpResponse(template.render())
-#############################################################
-
 def search(request):
   template = loader.get_template('search.html')
   return HttpResponse(template.render())
 #############################################################
 
+@csrf_exempt  
 def addStudent(request):
   template = loader.get_template('add_student_screen.html')
   if(request.GET.get("first_name") != None):
@@ -121,5 +118,26 @@ def addStudent(request):
 
 
   
-  
+@csrf_exempt  
+def searchResults(request):
+  value = request.POST.get('q', None)
+  students = Member.objects.all()
+  students = students.filter(firstname__icontains=value).filter(state=1)  | students.filter(lastname__icontains=value).filter(state=1)
+  context = {
+      'students' : students,
+      'value' : value
+  }
+  return render (request, 'searchResults.html', context)
+
+def departmentAssignment(request, id):
+    mymember = Member.objects.get(id = id)
+    context = {
+      'student' : mymember,
+    }
+    return render (request, 'departmentAssignment.html', context)
+
+def updateDep(request, id, val):
+  students = Member.objects.all()
+  students = students.filter(id=id).filter(level=3).update(dep=val)
+  return redirect(search)
 

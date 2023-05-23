@@ -1,0 +1,65 @@
+{% extends "master.html" %}
+
+{% load static %}
+
+
+{% block title%}
+Department Assignment
+{%endblock%}
+{% block stylesheet%}
+<link rel="stylesheet" href="{% static 'departmentAssignment.css'%}">
+<script type="text/javascript">
+    window.onsubmit = function() {
+        document.myform.action = get_action();
+    }
+
+    function get_action() {
+        var selectedOption = document.querySelector('#department');
+        var value = selectedOption.value;
+        link = "../departmentAssignment/{{student.id}}/val";
+        link = link.replace('val', value);
+        return link;
+    }
+
+    function alerting(){
+        var selectedOption = document.querySelector('#department');
+        var value = selectedOption.value;
+        alert("Student is assigned successfully in " + value + " department");
+    }
+</script>
+{%endblock%}
+
+
+{% block content%}
+<!-- <body onload="loadData()"> -->
+    <h1>Department Assignment</h1>
+    <h2>Student: </h2>
+    <div id="formdiv">
+        <form id="form" name="myform">
+            <div id="rows">
+                <div class="columns">
+                    <label for="id" class="labels">ID: </label>
+                    <div id="IdResult">{{student.id}}</div>
+                </div>
+                <div class="columns">
+                    <label for="name" class="labels">Full Name: </label>
+                    <div id="nameResult">{{student.firstname}} {{student.lastname}}</div>
+                </div>
+                <div class="columns">
+                    <label for="department" class="labels">Department: </label>
+                    <select name="dep" id="department" class="theInputs" required>
+                        <option value="" selected>Select your Department</option>
+                        <option value="AI">Artificial Intelligence - AI</option>
+                        <option value="CS">Computer Science - CS</option>
+                        <option value="DS">Decision Support - DS</option>
+                        <option value="IS">Information Systems - IS</option>
+                        <option value="IT">Information Technology - IT</option>
+                    </select>
+                </div>
+                <div id="button">
+                    <button onclick="alerting()">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{%endblock%}
