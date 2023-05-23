@@ -78,6 +78,13 @@ main.table {
     margin-bottom: 350px;
 }
 
+/*.table_header{*/
+/*    width: 100%;*/
+/*    height: 10%;*/
+/*    background-color: #fff4;*/
+/*    padding: .8rem 1rem;*/
+/*}*/
+
 .table_body {
     width: 95%;
     height: 95%;
@@ -106,6 +113,17 @@ main.table {
 
 /*STYLING FOR THE NAVIGATION BAR*/
 
+img {
+    width: 10%;
+    height: auto;
+    padding-left: 20px;
+}
+
+img {
+    min-width: 122px;
+    min-height: 28.5px;
+}
+
 .header {
     position: fixed;
     width: 100%;
@@ -118,6 +136,102 @@ main.table {
     background-color: #1c2d2b;
     padding: 17px;
     /*width: 100%;*/
+}
+
+.link {
+    color: #cbcbc8;
+    float: right;
+    height: 5%;
+    margin-top: 0.3%;
+    margin-right: 64.5px;
+    text-decoration: none;
+    font-size: 14pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.link:hover {
+    color: #946714;
+}
+
+/*STYLING FOR THE FOOTER*/
+
+footer {
+    margin-top: 150px;
+    width: 100%;
+    height: 300px;
+    padding: 100px 20%;
+    color: #bdbdb9;
+    background-color: #1c2d2b;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer div {
+    text-align: center;
+}
+
+.footer-section-about {
+    float: left;
+    width: 50%;
+}
+
+.footer-section-contact {
+    float: left;
+    width: 50%;
+}
+
+.footer div h3,
+.footer div h4 {
+    font-weight: 1000;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #946714;
+}
+
+.footer div h4 {
+    margin-top: 10px;
+
+}
+
+.footerLink {
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    color: #acb4b0;
+    margin-bottom: 5px;
+}
+
+footer .footer-bottom {
+    background-color: #aeb2ac;
+    color: #1c2d2b;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    footer {
+        background-color: #adada2;
+        color: #1c2d2b;
+        font-size: .8em;
+        margin-top: 25px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        position: static;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
 }
 
 /*STYLING THE BUTTONS*/
@@ -161,4 +275,8 @@ button:hover {
     background-color: #1c2d2b;
     cursor: pointer;
     color: #cbcbc8;
+}
+
+.footerLink:hover {
+    color: #946714;
 }
