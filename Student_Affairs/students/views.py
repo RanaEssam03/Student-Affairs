@@ -92,6 +92,7 @@ def search(request):
   return HttpResponse(template.render())
 #############################################################
 
+@csrf_exempt  
 def addStudent(request):
   template = loader.get_template('add_student_screen.html')
   return HttpResponse(template.render())
@@ -108,7 +109,7 @@ def delete(request, id):
 def searchResults(request):
   value = request.POST.get('q', None)
   students = Member.objects.all()
-  students = students.filter(firstname__icontains=value).filter(state=0)  | students.filter(lastname__icontains=value).filter(state=0)
+  students = students.filter(firstname__icontains=value).filter(state=1)  | students.filter(lastname__icontains=value).filter(state=1)
   context = {
       'students' : students,
       'value' : value
@@ -125,5 +126,5 @@ def departmentAssignment(request, id):
 def updateDep(request, id, val):
   students = Member.objects.all()
   students = students.filter(id=id).filter(level=3).update(dep=val)
-  return departmentAssignment(request, id)
+  return redirect(search)
 

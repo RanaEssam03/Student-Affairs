@@ -20,6 +20,12 @@ Department Assignment
         link = link.replace('val', value);
         return link;
     }
+
+    function alerting(){
+        var selectedOption = document.querySelector('#department');
+        var value = selectedOption.value;
+        alert("Student is assigned successfully in " + value + " department");
+    }
 </script>
 {%endblock%}
 
@@ -51,7 +57,7 @@ Department Assignment
                     </select>
                 </div>
                 <div id="button">
-                    <button>Save</button>
+                    <button onclick="alerting()">Save</button>
                 </div>
             </div>
         </form>
