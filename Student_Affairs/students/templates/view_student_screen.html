@@ -1,19 +1,19 @@
+<!DOCTYPE html>
 {% load static %}
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'view_student_screen.css' %}">
- {%load static%} <link rel="icon" href= "{% static "Images/logo-color-tab.png" %}">
+ {%load static%} <link rel="icon" href= "{% static 'Images/logo-color-tab.png' %}">
 
     <title>View Student Activity Log</title>
 </head>
 <header>
     <nav id="navBar" class = "header">
 
-        <a  href = "../home/" > {% load static%}<img src="{% static "Images/logo-color2.png" %}" alt="Website logo" style="text-align: start"></a>
+        <a  href = "../home/" > {% load static%}<img src="{% static 'Images/logo-color2.png' %}" alt="Website logo" style="text-align: start"></a>
         <a  href = "../allstudents/" class="link">View</a>
         <a href = "../search/"class="link">Search</a>
         <a href = "../add/"class="link">Add</a>
@@ -47,7 +47,6 @@
                       <td>{{std.dep}}</td>
                       <td>{{std.gpa}}</td>
                       <td>
-                          <label for="options"></label>
                        <form method = "POST" id ={{std.id}} onsubmit = "login()" >
                         {% csrf_token %}
                      <select class="dropdown" name="state"  onchange = "this.form.submit()" >

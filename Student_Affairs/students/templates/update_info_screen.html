@@ -21,16 +21,6 @@ Update Student
     <script>
         
 function updateStudent(form){
-    let Id = localStorage.getItem("id");
-    let fName = document.getElementById("first_name").value + " ";
-    let lName = document.getElementById("last_name").value;
-    let Email = document.getElementById("email").value;
-    let phoneNum = document.getElementById("phone").value;
-    let Level = document.getElementById("level").value;
-    let GPA = document.getElementById("gpa").value;
-    const myRe = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
-    const validateEmail = Email.match(myRe);
-  
     if(document.getElementById("hidden").value != "1")
         alert("Student updated!")
     
@@ -72,7 +62,7 @@ function updateStudent(form){
   <input  type="text" name="gpa" id="gpa" value = {{std.gpa}} pattern = "^([0-3](\.\d\d?)?|4(.00?)?)$"  required title= "Invalid GPA ! ">
   <br>
   <br>
-  <label for="department">Department:</label >
+  <label for="dep">Department:</label >
   <input  type="text" name="dep" id="dep" value = {{std.dep}}  disabled>
   <br>
   <br>
@@ -96,6 +86,6 @@ function updateStudent(form){
 
   <input type = "hidden" name = "delete" value = "0" id = "hidden"> 
   
-      </from>
+      </form>
       </center> 
 {% endblock %}

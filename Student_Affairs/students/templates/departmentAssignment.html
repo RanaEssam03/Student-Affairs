@@ -7,7 +7,14 @@
 Department Assignment
 {%endblock%}
 {% block stylesheet%}
+{% load static %}
+
 <link rel="stylesheet" href="{% static 'departmentAssignment.css'%}">
+
+{%endblock%}
+
+
+{% block content%}
 <script type="text/javascript">
     window.onsubmit = function() {
         document.myform.action = get_action();
@@ -27,10 +34,6 @@ Department Assignment
         alert("Student is assigned successfully in " + value + " department");
     }
 </script>
-{%endblock%}
-
-
-{% block content%}
 <!-- <body onload="loadData()"> -->
     <h1>Department Assignment</h1>
     <h2>Student: </h2>
@@ -38,11 +41,11 @@ Department Assignment
         <form id="form" name="myform">
             <div id="rows">
                 <div class="columns">
-                    <label for="id" class="labels">ID: </label>
+                    <label for="IdResult" class="labels">ID: </label>
                     <div id="IdResult">{{student.id}}</div>
                 </div>
                 <div class="columns">
-                    <label for="name" class="labels">Full Name: </label>
+                    <label for="nameResult" class="labels">Full Name: </label>
                     <div id="nameResult">{{student.firstname}} {{student.lastname}}</div>
                 </div>
                 <div class="columns">
