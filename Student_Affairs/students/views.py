@@ -110,12 +110,6 @@ def addStudent(request):
 
 ############################################################
 
-
-
-
-
-
-  
 @csrf_exempt  
 def searchResults(request):
   value = request.POST.get('q', None)
