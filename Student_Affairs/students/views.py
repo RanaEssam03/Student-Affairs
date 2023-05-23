@@ -58,14 +58,12 @@ def editStudent(request, id):
     gpa = request.GET.get("gpa")
     level = request.GET.get("level")
     birthdate = request.GET.get("birthdate")
-    state = request.GET.get("state")
     
     mymember.firstname = first_name
     mymember.lastname = last_name
     mymember.email = email
     mymember.phone = phone
     mymember.level = level
-    mymember.state = state
     mymember.birthdate = birthdate
     mymember.gpa = gpa
     

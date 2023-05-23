@@ -23,8 +23,6 @@ Update Student
     <script>
         
 function updateStudent(form){
-    alert("herrre22")
-
     let Id = localStorage.getItem("id");
     let fName = document.getElementById("first_name").value + " ";
     let lName = document.getElementById("last_name").value;
@@ -112,7 +110,7 @@ function updateStudent(form){
   <input  type="date" name="birthdate" id="birthdate" value = {{std.birthdate|date:"Y-m-d"}} >
   <br>
   <br>
-  <input type = "submit" value= "UBDATE" class="UBDATE" >
+  <button type = "submit" class="UBDATE" > UBDATE</button>
   {% comment %} <button  class="UBDATE" onclick="updateStudent()">UBDATE</button> {% endcomment %}
   {% csrf_token %}
 
@@ -120,12 +118,7 @@ function updateStudent(form){
 
 
   <input type = "hidden" name = "delete" value = "0" id = "hidden"> 
-  <label for="options"></label>
-                       
-  <select class="dropdown" name="state" id="state"   >
-           <option value ="1" {%if std.state%}selected {%endif%} >Active</option>
-           <option value = "0"{%if not std.state%}selected {%endif%} >Inactive</option>
-       </select>  
+  
       </from>
       </center> 
 {% endblock %}

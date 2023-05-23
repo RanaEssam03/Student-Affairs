@@ -34,13 +34,12 @@
                                     <button type="submit">Assign</button>
                                 </form>
                             {% else %}
-                                <form action="../departmentAssignment/{{student.id}}" name = "myform">
+                                <form action=" ../search" name = "myform">
                                     <button type="submit" onclick="alerting()">Assign</button>
                                 </form>
                                 <script>
                                     function alerting(){
                                         alert("Cannot assign, student level must be equal to 3");
-                                        document.myform.action = "../search";
                                     }
                                 </script>
                             {%endif%}    

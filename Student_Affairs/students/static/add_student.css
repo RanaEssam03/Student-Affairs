@@ -52,7 +52,7 @@ button {
 button:hover {
   background-color: #cbcbc8;
   color: #1c2d2b;
-  border: 2px solid #1c2d2b;
+  border: 1px solid #1c2d2b;
   transition-duration: .4s;
 }
 
