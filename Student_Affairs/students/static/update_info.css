@@ -81,12 +81,11 @@ label {
 
 .UBDATE {
   /* #1c2d2b; */
-  background: #9c1717;
+  background: #1c2d2b; ;
   text-align: center;
   flex-wrap: wrap;
   color: white;
   width: 210px;
-  padding: 70px;
   margin-left: 100px;
   border-color: #cbcbc8;
 
