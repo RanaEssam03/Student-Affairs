@@ -13,4 +13,5 @@ urlpatterns = [
     path('add/', views.addStudent, name = "addStudent"),
     path('departmentAssignment/<int:id>', views.departmentAssignment, name="departmentAssignment"), 
     path('departmentAssignment/<int:id>/<str:val>', views.updateDep, name="updateDepartment"), 
+
 ]

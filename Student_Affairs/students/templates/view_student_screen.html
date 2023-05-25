@@ -6,9 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'view_student_screen.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  {%load static%} <link rel="icon" href= "{% static 'Images/logo-color-tab.png' %}">
 
     <title>View Student Activity Log</title>
+    <script src= "{% static 'js\view_student_screen.js' %}"></script>   
 </head>
 <header>
     <nav id="navBar" class = "header">
@@ -47,13 +49,13 @@
                       <td>{{std.dep}}</td>
                       <td>{{std.gpa}}</td>
                       <td>
-                       <form method = "POST" id ={{std.id}} onsubmit = "login()" >
+                       <form method = "POST" id ="#myform" >
                         {% csrf_token %}
-                     <select class="dropdown" name="state"  onchange = "this.form.submit()" >
+                     <select class="dropdown" name="state" id="state{{std.id}}" onchange = "changeState({{std.id}})"  >
                               <option value ="1"{%if std.state%}selected {%endif%} >Active</option>
                               <option value = "2"{%if not std.state%}selected {%endif%} >Inactive</option>
                           </select>
-                            <input type = "hidden" name = "id" value = {{std.id}}  >
+                            <input type = "hidden" id = "{{std.id}}" value = {{std.id}}  >
                         </form>
              
                       </td>
