@@ -21,7 +21,7 @@ Update Student
 {% block content %}  
 <h1 style="margin-left: 6%;"> Update Student's Info </h1>
 <center>
-<form style="text-align: center; " id="fields" method = "GET" onclick = "updateStd()">
+<form style="text-align: center; " id="fields" method = "GET" onsubmit = "updateStd()">
 
   {% csrf_token %}
   <label for="first_name">First Name:</label>
