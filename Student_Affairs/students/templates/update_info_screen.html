@@ -14,33 +14,15 @@ Update Student
 <link rel="stylesheet" href="{% static 'update_info.css' %}">
 {% endblock %}
 
+{%block script%} 
+<script type="text/javascript" src="{% static 'js/update_info_screen.js'%}"> </script>
+{%endblock%}
+
 {% block content %}  
 <h1 style="margin-left: 6%;"> Update Student's Info </h1>
 <center>
 <form style="text-align: center; " id="fields" method = "GET" onsubmit = "updateStudent()">
-    <script>
-        
-function updateStudent(form){
-    if(document.getElementById("hidden").value != "1")
-        alert("Student updated!")
-    
-}
 
-
-    function deleteStd(){
-        document.getElementById("hidden").value = "1"
-        document.getElementById("fields").submit();
-        return;
-    } 
-    
-    function confirmDeletion(){
-        const reponse = confirm("Are you sure you want to delete this student?");
-        if (reponse == true){
-            deleteStd();
-        }   
-    }
-    
-    </script>
   {% csrf_token %}
   <label for="first_name">First Name:</label>
   <input  type="text" name="first_name" id="first_name"  value = {{std.firstname }} required>

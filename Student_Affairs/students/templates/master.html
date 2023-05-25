@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content = "IE = edge">
   <meta name = "viewport" conetnt = "width=device-width, initial-scale=1.0">
  {%load static%} <link rel="icon" href= "{% static 'Images/logo-color-tab.png' %}">
+ <link rel="stylesheet" href="{% static 'master.css' %}">
 
   {% block stylesheet %}  {% endblock %}
   {%block script%} {%endblock%}
@@ -15,18 +16,17 @@
 
 <body>
   <nav id="navBar">
-
     <a  href = "../home/" > {% load static%}<img src="{% static 'Images/logo-color2.png' %}" alt="Website logo" style="text-align: start"></a>
     <a  href = "../allstudents/" class="link">View</a>
     <a href = "../search/"class="link">Search</a>
     <a href = "../add/"class="link">Add</a>
     <a href = "../home/"class="link">Home</a>
-      </nav>
+  </nav>
 
 {% block content %}
 
 {% endblock %}
-<div class="footer">
+<footer class="footer">
   <div class="footer-content">
     <div class="footer-section-about">
       <h3>About us</h3>
@@ -49,7 +49,7 @@
   <div class="footer-bottom">
     &copy; academic-students-affairs.com | Designed by a team of professional designers
   </div>
-</div>
+</footer>
 </body>
 
 </html>

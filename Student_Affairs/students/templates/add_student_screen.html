@@ -7,8 +7,12 @@
 {%load static%}
 
 
-  {% block title %}Add Student{% endblock %}
-  {% block stylesheet %}   <link rel="stylesheet" type="text/css"  href="{% static 'add_student.css'%}"/>
+  {% block title %}
+  Add Student
+  {% endblock %}
+  
+  {% block stylesheet %}   
+  <link rel="stylesheet" type="text/css"  href="{% static 'add_student.css'%}"/>
   {% endblock %}
 
 
@@ -68,11 +72,8 @@
       <label for="female" class="Gender">Female </label>
       <br>
       <br>
-      <!-- <input type = "submit" class = "ADD_STUDENT" value="ADD STUDENT"> -->
       <button type="submit" class="ADD_STUDENT" > ADD STUDENT </button>
       {% comment %} ADD STUDENT </button> {% endcomment %}
-   
     </form>
-
   </center>
   {% endblock%}

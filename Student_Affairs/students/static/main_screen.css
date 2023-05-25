@@ -1,4 +1,3 @@
-
 h1,h2{
     text-align: center;
     color:#77510b;
@@ -20,11 +19,13 @@ h4{
    font-family: 'Arial Narrow Bold', sans-serif;
    padding-top: 20px;
 }
+
 .container{
     width: 80%;
     margin: auto; /*to align it at the center*/
     margin-bottom: 30px;
  }
+
  .container h2{
     color: #b1770b;
     text-align: center;
@@ -32,6 +33,7 @@ h4{
     font-family: 'Arial Narrow Bold', sans-serif;
     letter-spacing: 5px;
  }
+
  .container h2::before, .container h2::after{ /*to put dashes before and after"projects"*/
     content: "-----";
     letter-spacing: -5px;
@@ -70,6 +72,7 @@ h4{
    color: #cbcbc8;
    text-decoration: none;
 }
+
 .container .column:hover a:last-child{
    height: 100%; /* needed to make the shadow appear on the full height*/
    top: 0; /*needed to make the shadow appear*/

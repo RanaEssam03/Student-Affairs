@@ -15,14 +15,12 @@ h2 {
   font-family: Serif;
   font-size: 30px;
   text-align: center;
-
 }
 
 img {
   min-width: 122px;
   min-height: 28.5px;
 }
-
 
 input {
   width: 350px;
@@ -36,7 +34,6 @@ input {
   padding: 5px;
   text-align: left;
   height: 37px;
-
 }
 
 * {
@@ -52,22 +49,18 @@ button {
   height: 45px;
   text-align: left;
   margin-top: 26px;
-
 }
 
 button:hover {
   background-color: #cbcbc8;
   color: #1c2d2b;
   border: 1px solid #1c2d2b;
-
 }
-
 
 form {
   /* padding: 100px; */
   text-align: left;
   display: table;
-
 }
 
 label {
@@ -76,8 +69,6 @@ label {
   display: inline-block;
   text-align: left;
 }
-
-
 
 .UBDATE {
   /* #1c2d2b; */
@@ -88,64 +79,17 @@ label {
   width: 210px;
   margin-left: 100px;
   border-color: #cbcbc8;
-
-
   box-shadow: inset;
   /* margin-bottom: 200px ; */
   font-family: serif;
   font-size: 18px;
 
   font-weight: bold;
-
-}
-
-
-
-body {
-  background-color: #cbcbc8;
-  color: #1c2d2b;
-  margin: 0px;
-  min-height: calc(100vh - 211px -589x);
-}
-
-img {
-  width: 10%;
-  height: auto;
-  padding-left: 20px;
-}
-
-#navBar {
-  background-color: #1c2d2b;
-  padding: 17px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-
 }
 
 body {
   margin-top: 5%;
 }
-
-.link {
-  color: #cbcbc8;
-  float: right;
-  height: 5%;
-  margin-top: 0.3%;
-  margin-right: 64.5px;
-  text-decoration: none;
-  font-size: 14pt;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.link:hover {
-  color: #946714;
-}
-
-.footerLink:hover {
-  color: #946714;
-}
-
 
 .Gender {
   width: 50px;
@@ -153,13 +97,11 @@ body {
   position: relative;
   font-size: 20px;
   text-align: left;
-
 }
 
 .delete:hover {
   background-color: rgb(147, 28, 28);
   color: white;
-
 }
 
 .delete {
@@ -172,69 +114,4 @@ body {
   font-family: serif;
   font-size: 18px;
   font-weight: bold;
-
-}
-
-.footer {
-  margin-top: 150px;
-  width: 100%;
-  height: 300px;
-  padding: 100px 20% 100px;
-  color: #bdbdb9;
-  background-color: #1c2d2b;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  position: absolute;
-
-
-}
-
-.footer div {
-  text-align: center;
-}
-
-.footer-section-about {
-  float: left;
-  width: 50%;
-}
-
-.footer-section-contact {
-  float: left;
-  width: 50%;
-}
-
-.footer div h3,
-.footer div h5 {
-  font-weight: 1000;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-  color: #946714;
-}
-
-.footer div h5 {
-  margin-top: 10px;
-
-}
-
-.footerLink {
-  font-weight: 600;
-  display: block;
-  text-decoration: none;
-  color: #acb4b0;
-  margin-bottom: 5px;
-}
-
-
-
-.footer .footer-bottom {
-  background-color: #aeb2ac;
-  color: #1c2d2b;
-  height: 20px;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 20px;
 }

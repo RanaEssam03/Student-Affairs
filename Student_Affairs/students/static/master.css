@@ -1,0 +1,147 @@
+body {
+    background-color: #cbcbc8;
+    color: #1c2d2b;
+    margin: 0px;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
+}
+
+/* HEADER STYLING */
+
+img {
+    width: 10%;
+    height: auto;
+    padding-left: 20px;
+}
+
+img {
+    min-width: 122px;
+    min-height: 28.5px;
+}
+
+#logo {
+    width: 10%;
+    height: auto;
+    padding-left: 20px;
+}
+
+#navBar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Exo 2', sans-serif;
+    z-index: 999;
+    background-color: #1c2d2b;
+    padding: 17px;
+    margin-bottom: 260px;
+}
+
+.link {
+    color: #cbcbc8;
+    float: right;
+    height: 5%;
+    margin-top: 0.3%;
+    margin-right: 64.5px;
+    text-decoration: none;
+    font-size: 14pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.link:hover {
+    color: #946714;
+}
+
+/* FOOTER STYLING */
+
+.footer {
+    margin-top: 150px;
+    width: 100%;
+    height: 300px;
+    padding: 100px 20%;
+    color: #bdbdb9;
+    background-color: #1c2d2b;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.footer div {
+    text-align: center;
+}
+
+.footer-section-about {
+    float: left;
+    width: 50%;
+}
+
+.footer-section-contact {
+    float: left;
+    width: 50%;
+}
+
+.footer div h3,
+.footer div h4 {
+    font-weight: 1000;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #946714;
+}
+
+.footer div h4 {
+    margin-top: 10px;
+}
+
+.footerLink {
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    color: #acb4b0;
+    margin-bottom: 5px;
+}
+
+.footerLink:hover {
+    color: #946714;
+}
+
+.footer .footer-bottom {
+    background-color: #aeb2ac;
+    color: #1c2d2b;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    #navBar {
+        position: relative;
+    }
+
+    footer {
+        background-color: #1c2d2b;
+        color: #bebeb8;
+        font-size: .8em;
+        width: 100%;
+    }
+
+    img {
+        min-width: 103px;
+        min-height: 52px;
+    }
+
+    .link {
+        font-size: .8em;
+        display: none;
+    }
+
+    #logo {
+        width: 18%;
+        height: 18%;
+    }
+}

@@ -1,7 +1,13 @@
 {% extends "master.html" %}
 {%load static%}
 
-    {% block stylesheet %} <link rel="stylesheet" href="{% static 'searchResults.css' %}"> {% endblock %}
+{% block title%}
+Search Results
+{%endblock%}
+
+{% block stylesheet %} 
+<link rel="stylesheet" href="{% static 'searchResults.css' %}"> 
+{% endblock %}
 
 
 {% block content %}

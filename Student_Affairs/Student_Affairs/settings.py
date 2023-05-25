@@ -123,7 +123,7 @@ STATIC_URL = 'static/'
 
 #Add this in your settings.py file:
 STATICFILES_DIRS = [
-    BASE_DIR / "students\static"
+    BASE_DIR / "students/static"
 ]
 
 # Default primary key field type

@@ -6,35 +6,21 @@
 {% block title%}
 Department Assignment
 {%endblock%}
+
+
 {% block stylesheet%}
 {% load static %}
-
 <link rel="stylesheet" href="{% static 'departmentAssignment.css'%}">
+{%endblock%}
 
+
+{%block script%} 
+{% load static %}
+<script type="text/javascript" src="{% static 'js/departmentAssignment.js'%}"> </script>
 {%endblock%}
 
 
 {% block content%}
-<script type="text/javascript">
-    window.onsubmit = function() {
-        document.myform.action = get_action();
-    }
-
-    function get_action() {
-        var selectedOption = document.querySelector('#department');
-        var value = selectedOption.value;
-        link = "../departmentAssignment/{{student.id}}/val";
-        link = link.replace('val', value);
-        return link;
-    }
-
-    function alerting(){
-        var selectedOption = document.querySelector('#department');
-        var value = selectedOption.value;
-        alert("Student is assigned successfully in " + value + " department");
-    }
-</script>
-<!-- <body onload="loadData()"> -->
     <h1>Department Assignment</h1>
     <h2>Student: </h2>
     <div id="formdiv">
@@ -65,4 +51,13 @@ Department Assignment
             </div>
         </form>
     </div>
+    <script type="text/javascript">
+        function get_action() {
+            var selectedOption = document.getElementById('department');
+            var value = selectedOption.value;
+            link = "../departmentAssignment/{{student.id}}/val";
+            link = link.replace('val', value);
+            return link;
+        }
+    </script>
 {%endblock%}
