@@ -4,15 +4,20 @@ from .models import Member
 from django.views.decorators.csrf import csrf_exempt
 from django.db import IntegrityError
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
+# from .fomrs import stateForm
 
 
 def allstudents(request):
+  
   mymember = Member.objects.all()
   template = loader.get_template('view_student_screen.html')
   context = {
     'students': mymember, 
   }
-  if request.POST.get('id')  != None:
+
+  
+  if request.POST.get('id') is not None:
     id = request.POST.get('id')
     std = Member.objects.get(id= id)
     
@@ -21,6 +26,7 @@ def allstudents(request):
     else:
       std.state = False
     std.save()
+    
   
   return HttpResponse(template.render(context, request))
 
@@ -138,4 +144,21 @@ def updateDep(request, id, val):
   students = Member.objects.all()
   students = students.filter(id=id).filter(level=3).update(dep=val)
   return redirect(search)
+
+
+def updateState(request):
+  print('here3')
+  if request.GET.get('id') :
+    print('herrre')
+    id = request.GET.get('id')
+    std = Member.objects.get(id= id)
+    
+    if( request.GET.get('state') == '1'):
+      std.state = True
+    else:
+      std.state = False
+    std.save()
+    JsonResponse("hereee Done")
+    
+    
 
