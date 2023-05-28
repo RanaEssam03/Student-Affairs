@@ -15,12 +15,5 @@ class Member(models.Model):
     
     
 
-class state(models.Model):
-    state = models.BooleanField(default= False)
-    stateID = models.IntegerField()
-    
-    def __str__(self):
-        return self.state
-    
-    def __str__(self):
-        return self.id
+class Announcement(models.Model):
+    content = models.CharField(max_length=1024)

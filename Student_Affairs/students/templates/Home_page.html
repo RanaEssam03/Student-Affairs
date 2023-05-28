@@ -24,17 +24,10 @@ ASA - Home Page
 <div>
   <ol>
     <h2 id ="ann"><i>Announcements</i></h2>
-    <li>Registration is still closed unless the student is accepted and he has filled the application.</li>
+    {% for announcement in announcements %}
+    <li>{{announcement.content}}</li>
     <br><br>
-    <li>Check list of students that need to be added for the academic year's start and those who need to assign their department.</li>
-    <br>
-    <br>
-    <li>For general program, the registartion 
-      is now opened for a duration of 2 weeks for students who have passed last years' exams.</li>
-      <br>
-      <br>
-      <li>There has been a modification in the schedule for the General 
-        programs as the new department that was added 2 years ago is canceled. </li>
+    {% endfor %}
   </ol>
 </div>
 {%endblock%}

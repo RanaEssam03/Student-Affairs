@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.template import loader
 from .models import Member
+from .models import Announcement
 from django.views.decorators.csrf import csrf_exempt
 from django.db import IntegrityError
 from django.shortcuts import render, redirect
@@ -88,7 +89,10 @@ def main(request):
 
 def home(request):
   template = loader.get_template('Home_page.html')
-  return HttpResponse(template.render())
+  context= {
+    'announcements': Announcement.objects.all(), 
+  }
+  return HttpResponse(template.render(context, request))
 #############################################################
 
 def search(request):
