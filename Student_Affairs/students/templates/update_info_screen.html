@@ -21,7 +21,7 @@ Update Student
 {% block content %}  
 <h1 style="margin-left: 6%;"> Update Student's Info </h1>
 <center>
-<form style="text-align: center; " id="fields" method = "GET" onsubmit = "updateStd()">
+<form style="text-align: center; " id="fields" method = "POST" onsubmit ="updateStd();">
 
   {% csrf_token %}
   <label for="first_name">First Name:</label>
@@ -57,10 +57,10 @@ Update Student
   <br>
   <br>
   <label for="birthdate"> Birthdate:</label> 
-  <input  type="date" name="birthdate" id="birthdate" value = {{std.birthdate|date:"Y-m-d"}} required >
+  <input  type="date" name="birthdate" id="birthdate" value = {{std.birthdate|date:"Y-m-d"}} disabled >
   <br>
   <br>
-  <button type = "submit" class="UBDATE" > UBDATE</button>
+  <button type = "submit" class="UBDATE"  > UBDATE</button>
   {% csrf_token %}
 
   <button class="delete" onclick="confirmDeletion()">DELETE</button>   

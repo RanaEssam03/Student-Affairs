@@ -17,10 +17,13 @@ function confirmDeletion(form){
  
 }
 function updateStd(event){
+
+
     if(!flag && document.getElementById("hidden").value =='0')
-        alert("student updated")
+        alert("student updated2222")
 
     event.preventDefault();
 }
+
 
 

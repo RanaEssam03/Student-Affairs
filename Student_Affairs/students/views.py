@@ -52,19 +52,19 @@ def editStudent(request, id):
   context = {
     'std': mymember, 
   }
-  if request.GET.get('first_name')  != None:
-    if(request.GET.get('delete') == "1"):
+  if request.POST.get('first_name')  != None:
+    if(request.POST.get('delete') == "1"):
       mymember.delete()
       return redirect(allstudents)
     
-    first_name = request.GET.get('first_name')
-    last_name = request.GET.get("last_name")
-    id = request.GET.get("id")
-    email = request.GET.get("email")
-    phone = request.GET.get("phone")
-    gpa = request.GET.get("gpa")
-    level = request.GET.get("level")
-    birthdate = request.GET.get("birthdate")
+    first_name = request.POST.get('first_name')
+    last_name = request.POST.get("last_name")
+    id = request.POST.get("id")
+    email = request.POST.get("email")
+    phone = request.POST.get("phone")
+    gpa = request.POST.get("gpa")
+    level = request.POST.get("level")
+    birthdate = request.POST.get("birthdate")
     
     mymember.firstname = first_name
     mymember.lastname = last_name
@@ -75,7 +75,7 @@ def editStudent(request, id):
     mymember.gpa = gpa
     
     mymember.save() 
-    return redirect(allstudents)
+    return HttpResponse(template.render(context, request))
   
   return HttpResponse(template.render(context, request))
 
