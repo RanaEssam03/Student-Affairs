@@ -11,7 +11,7 @@ class Member(models.Model):
     birthdate = models.DateField()
     gender = models.CharField(max_length=6)
     dep = models.CharField(max_length= 10,  default='General')
-    state = models.BooleanField(default= False)
+    state = models.BooleanField(default= True)
     
     
 
