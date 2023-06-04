@@ -41,3 +41,12 @@ python manage.py runserver
 
 Contributions to the ASA project are welcome! If you encounter any issues or have ideas for new features, please open an issue on the GitHub repository or submit a pull request.
 
+### Contributors
+
+| Name        | Email                |
+| ----------- | --------------------|
+| Rana Essam   | ranaessam03@gmail.com|
+| Nour Muhammed   | nourmuhammad835@gmail.com|
+| Merna Islam  | mernaislam39@gmail.com|
+| Noor Eyad  | nooreyadd39@gmail.com |
+
