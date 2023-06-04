@@ -1,6 +1,8 @@
 
 # Academic Student Affairs (ASA)
-![alt text](https://raw.githubusercontent.com/RanaEssam03/Student-Affairs/main/Student_Affairs/students/static/Images/logo-color2.png)
+
+<img src="https://raw.githubusercontent.com/RanaEssam03/Student-Affairs/main/Student_Affairs/students/static/Images/logo-color2.png " width="500" > 
+
 
 The Academic Students Affair (ASA) project is a full-stack web application built using the Django framework. It provides several features to manage student records, including adding new students, editing their information, assigning them to departments, updating their status, and deleting them from the system.
 
