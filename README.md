@@ -1,7 +1,7 @@
 
-# Academic Students Affairs (ASA)
+# Academic Student Affairs (ASA)
 
-The Academic Students Affairs (ASA) project is a full-stack web application built using the Django framework. It provides several features to manage student records, including adding new students, editing their information, assigning them to departments, updating their status, and deleting them from the system.
+The Academic Students Affair (ASA) project is a full-stack web application built using the Django framework. It provides several features to manage student records, including adding new students, editing their information, assigning them to departments, updating their status, and deleting them from the system.
 
 ## Features
 
